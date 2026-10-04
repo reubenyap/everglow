@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "sage": "10.8",
+  "scipy": "1.18.1",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "cpu": "AMD Ryzen 7 9700X 8-Core Processor",
+  "estimator_commit": "53da5982597709ba0fdf94ea37a84d822310fd84",
+  "estimator_tree_status": "",
+  "micromamba_sha256": "366cd9cd8be14df1ab8ed50352a82111082a36686b2d389fdb79a92c3fafb3e3",
+  "runtime_root": "/home/reuben/.cache/spark-pq-measure-20261002",
+  "tools": {
+    "g++": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "clang-tidy": "Ubuntu LLVM version 21.1.8",
+    "cppcheck": "Cppcheck 2.19.0"
+  }
+}

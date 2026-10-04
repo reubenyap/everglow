@@ -1,0 +1,277 @@
+{
+  "started_utc": "2026-10-02T09:58:25.674932+00:00",
+  "estimator_commit": "53da5982597709ba0fdf94ea37a84d822310fd84",
+  "sage_version": "10.8",
+  "python_version": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "phase": "quantum-search",
+  "widths": [
+    16,
+    17,
+    18
+  ],
+  "assumptions": [
+    "Fixed public A,B each have two ring rows; degree 64; one distinct Bs tag.",
+    "Invertible four-column ring block permits binary-secret/binary-error systematization.",
+    "Plain-LWE flattening is heuristic and does not model module-specific cryptanalysis.",
+    "Finite sample count is 256, independently of scheme width.",
+    "GSA and quantum Core-SVP costs are heuristics, not measured quantum hardware costs.",
+    "Primal hybrid guessing and probability handling retain the official classical/MITM model.",
+    "MITM with SVP hybrid is a sensitivity check flagged overly optimistic by the official suite.",
+    "MATZOV dual is excluded because its default sample count is n at this revision.",
+    "No proof soundness, Module-SIS, multi-target, or complete LRS security assessment.",
+    "DH uses exhaustive_search(quantum=True), a heuristic square-root search cost.",
+    "DH caps original input samples at 256; derived short-vector samples are separately costed.",
+    "DH beta optimization is bounded by max(min(m-zeta,max_beta),48) at this revision.",
+    "DH at zeta=0 distinguishes; at positive zeta it costs the searched subvector only.",
+    "Quantum gate costs, oracle construction and remaining-secret reconstruction are not explicitly costed."
+  ],
+  "results": [
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^298.1, mem: \u22482^297.1, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 553",
+      "components": {
+        "rop": "5.79332134665769e81*sqrt(8962050101983397) + 8.03439577611633e6",
+        "mem": "2.89666067332884e81*sqrt(8962050101983397) + 75234498",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "553",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 298.106941484765,
+        "mem": 297.106941484765
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 553,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 0.9886884739999999
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^298.1, mem: \u22482^297.1, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 553",
+      "components": {
+        "rop": "5.79332134665769e81*sqrt(8962050101983397) + 1.04265468675986e7",
+        "mem": "2.89666067332884e81*sqrt(8962050101983397) + 75234498",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "553",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 298.106941484765,
+        "mem": 297.106941484765
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 553,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 1.0623108839999986
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^330.3, mem: \u22482^329.3, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 617",
+      "components": {
+        "rop": "2.76844332926933e91*sqrt(8962050101983397) + 8.93864387369754e6",
+        "mem": "1.38422166463467e91*sqrt(8962050101983397) + 83701924",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "617",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 330.2609067321667,
+        "mem": 329.2609067321667
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 617,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 0.9642207970000101
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^330.3, mem: \u22482^329.3, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 617",
+      "components": {
+        "rop": "2.76844332926933e91*sqrt(8962050101983397) + 1.16000246787607e7",
+        "mem": "1.38422166463467e91*sqrt(8962050101983397) + 83701924",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "617",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 330.2609067321667,
+        "mem": 329.2609067321667
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 617,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 0.9534259639999902
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^362.4, mem: \u22482^361.4, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 681",
+      "components": {
+        "rop": "1.30939554982270e101*sqrt(8962050101983397) + 9.84289197127875e6",
+        "mem": "6.54697774911350e100*sqrt(8962050101983397) + 92169350",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "681",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 362.40001367203155,
+        "mem": 361.4000136720316
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 681,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 0.9673511369999943
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "dual_hybrid_quantum_search",
+      "options": {
+        "success_probability": 0.99,
+        "opt_step": 8,
+        "fft": false
+      },
+      "shape_model": null,
+      "status": "ok",
+      "solver": {
+        "name": "estimator.lwe_guess.exhaustive_search",
+        "quantum": true
+      },
+      "raw_repr": "rop: \u22482^362.4, mem: \u22482^361.4, m: 228, \u03b2: 47, d: 443, \u21bb: 1, \u03b6: 681",
+      "components": {
+        "rop": "1.30939554982270e101*sqrt(8962050101983397) + 1.27735024899229e7",
+        "mem": "6.54697774911350e100*sqrt(8962050101983397) + 92169350",
+        "m": "228",
+        "beta": "47",
+        "d": "443",
+        "repetitions": "1",
+        "zeta": "681",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 362.40001367203155,
+        "mem": 361.4000136720316
+      },
+      "original_samples_used": 228,
+      "searched_coordinates": 681,
+      "interpretation": "Subvector search; remaining-secret recovery is not explicitly costed.",
+      "elapsed_seconds": 0.8945026490000032
+    }
+  ],
+  "finished_utc": "2026-10-02T09:58:31.610028+00:00"
+}

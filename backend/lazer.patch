@@ -1,0 +1,274 @@
+--- a/src/lazer-in2.h
++++ b/src/lazer-in2.h
+@@ -1453,7 +1453,7 @@
+                    polyvec_t h, polyvec_t tA1, polymat_t A1, polymat_t A2prime,
+                    const abdlop_params_t params);
+ 
+-void lnp_quad_prove (uint8_t hash[32], polyvec_t tB, poly_t c, polyvec_t z1,
++int lnp_quad_prove (uint8_t hash[32], polyvec_t tB, poly_t c, polyvec_t z1,
+                      polyvec_t z21, polyvec_t h, polyvec_t s1, polyvec_t m,
+                      polyvec_t s2, polyvec_t tA2, polymat_t A1,
+                      polymat_t A2prime, polymat_t Bprime, spolymat_t R2,
+@@ -1464,7 +1464,7 @@
+                      polymat_t A2prime, polymat_t Bprime, spolymat_t R2,
+                      spolyvec_t r1, poly_t r0, const abdlop_params_t params);
+ 
+-void lnp_quad_many_prove (uint8_t hash[32], polyvec_t tB, poly_t c,
++int lnp_quad_many_prove (uint8_t hash[32], polyvec_t tB, poly_t c,
+                           polyvec_t z1, polyvec_t z21, polyvec_t h,
+                           polyvec_t s1, polyvec_t m, polyvec_t s2,
+                           polyvec_t tA2, polymat_t A1, polymat_t A2prime,
+@@ -1479,7 +1479,7 @@
+                           spolyvec_ptr r1i[], poly_ptr r0i[], unsigned int N,
+                           const abdlop_params_t params);
+ 
+-void lnp_quad_eval_prove (uint8_t hash[32], polyvec_t tB, polyvec_t h,
++int lnp_quad_eval_prove (uint8_t hash[32], polyvec_t tB, polyvec_t h,
+                           poly_t c, polyvec_t z1, polyvec_t z21,
+                           polyvec_t hint, polyvec_t s1, polyvec_t m,
+                           polyvec_t s2, polyvec_t tA2, polymat_t A1,
+--- a/src/lnp-quad.c
++++ b/src/lnp-quad.c
+@@ -1,11 +1,12 @@
+ #include "lazer.h"
+ #include "stopwatch.h"
++#include "blrs_callbacks.h"
+ 
+ /*
+  * hash hash of tA1, tB,
+  * tB = (tB_,t, Bprime=(Bprime_,bextprime)
+  */
+-void
++int
+ lnp_quad_prove (uint8_t hash[32], polyvec_t tB, poly_t c, polyvec_t z1,
+                 polyvec_t z21, polyvec_t h, polyvec_t s1, polyvec_t m,
+                 polyvec_t s2, polyvec_t tA2, polymat_t A1, polymat_t A2prime,
+@@ -44,7 +45,7 @@
+   unsigned int outlen;
+   uint8_t cseed[32]; /* challenge seed */
+   uint8_t yseed[32]; /* mask seed */
+-  int rej = 1;
++  int rej = 1, accepted = 0;
+ 
+   DEBUG_PRINTF (DEBUG_PRINT_FUNCTION_ENTRY, "%s", "lnp_quad_prove begin");
+   STOPWATCH_START (stopwatch_lnp_quad_prove, "lnp_quad_prove");
+@@ -153,9 +154,11 @@
+     {
+       /* y1, y2 */
+ 
+-      polyvec_grandom (y1, params->log2stdev1, yseed, dom);
++      if (!blrs_sample_vector (y1, params->log2stdev1))
++        goto cleanup;
+       dom++;
+-      polyvec_grandom (y2, params->log2stdev2, yseed, dom);
++      if (!blrs_sample_vector (y2, params->log2stdev2))
++        goto cleanup;
+       dom++;
+ 
+       /* w */
+@@ -235,22 +238,23 @@
+       polyvec_scale2 (cs1, c, s1);
+       polyvec_scale2 (cs2, c, s2); // XXX correct
+       polyvec_add (y1, y1, cs1, 0);
+-      polyvec_add (y2, y2, cs2,
+-                   0); // XXX correct, XXX sample sign with bimodal ?
+-
+-      ASSERT_ERR (params->rej1 == 0 || params->rej1 == 1);
++      polyvec_add (y2, y2, cs2, 0);
++
++      ASSERT_ERR (params->rej1 == 0 || params->rej1 == 1 || params->rej1 == 2);
+       if (params->rej1)
+         {
+           /* to coeff rep */
+           polyvec_fromcrt (y1);
+           polyvec_fromcrt (cs1);
+ 
+-          rej = rej_standard (rngstate, z1coeffs, cs1coeffs, params->scM1,
+-                              params->stdev1sqr);
++          /* The outer BLOOM witness already contains its one global sign. */
++          rej = blrs_reject_vector (z1coeffs, cs1coeffs,
++                                    params->log2stdev1,
++                                    params->rej1 == 2 ? 2 : 4, params->rej1);
+           if (rej)
+             {
+               DEBUG_PRINTF (DEBUG_PRINT_REJ, "%s", "reject on s1");
+-              continue;
++              goto cleanup;
+             }
+         }
+       ASSERT_ERR (params->rej2 == 0 || params->rej2 == 1 || params->rej2 == 2);
+@@ -261,15 +265,15 @@
+           polyvec_fromcrt (cs2);
+ 
+           if (params->rej2 == 1)
+-            rej = rej_standard (rngstate, z2coeffs, cs2coeffs, params->scM2,
+-                                params->stdev2sqr);
++            rej = blrs_reject_vector (z2coeffs, cs2coeffs,
++                                      params->log2stdev2, 2, 1);
+           if (params->rej2 == 2)
+-            rej = rej_bimodal (rngstate, z2coeffs, cs2coeffs, params->scM2,
+-                               params->stdev1sqr);
++            rej = blrs_reject_vector (z2coeffs, cs2coeffs,
++                                      params->log2stdev2, 2, 2);
+           if (rej)
+             {
+               DEBUG_PRINTF (DEBUG_PRINT_REJ, "%s", "reject compr");
+-              continue;
++              goto cleanup;
+             }
+         }
+ 
+@@ -282,7 +286,7 @@
+       if (rej)
+         {
+           DEBUG_PRINTF (DEBUG_PRINT_REJ, "%s", "reject on s1");
+-          continue;
++          goto cleanup;
+         }
+ 
+       break;
+@@ -300,7 +304,9 @@
+   polyvec_mod (w1, w1);
+   polyvec_redc (w1, w1); // XXX
+   polyvec_dcompress_make_ghint (h, y22, w1, dcomp_param);
+-
++  accepted = 1;
++
++cleanup:
+   /* cleanup */
+   shake128_clear (hstate);
+   rng_clear (rngstate);
+@@ -323,6 +329,7 @@
+ 
+   STOPWATCH_STOP (stopwatch_lnp_quad_prove);
+   DEBUG_PRINTF (DEBUG_PRINT_FUNCTION_RETURN, "%s", "lnp_quad_prove end");
++  return accepted;
+ }
+ 
+ int
+@@ -482,10 +489,10 @@
+ 
+   /*
+    * l2(z1)^2 <= sigma1^2 * 2 * m1 *d = 1.55^2 * 2^(log2sigma1*2) * 2 * m1 * d
+-   * 1.55^2=2.4025, scale by 400: 1.55^2*400=962
++   * 1.55^2=2.4025, scale by 400: 1.55^2*400=961
+    */
+   int_set_i64 (tmp, 400);
+-  int_set_i64 (bnd, 2 * m1 * d * 962);
++  int_set_i64 (bnd, 2 * m1 * d * 961);
+   int_lshift (bnd, bnd, 2 * params->log2stdev1);
+   int_div (bnd, tmp, bnd, tmp); /* div by 400, overlap ok ? XXX */
+ 
+@@ -497,7 +504,16 @@
+   }
+ 
+   polyvec_subscale (tmp1, gamma, w1, 0);
++  polyvec_mod (tmp1, tmp1);
++  polyvec_redc (tmp1, tmp1);
++  /* Bound each recovered coefficient before the fixed-width norm sum. */
++  polyvec_linf (linf, tmp1);
++  int_sqr (bnd, linf);
++  if (!int_le (bnd, params->Bsqr))
++    goto ret;
+   polyvec_l2sqr (l2sqr, tmp1);
++  polyvec_l2sqr (bnd, z21);
++  int_add (l2sqr, l2sqr, bnd);
+   b = int_le (l2sqr, params->Bsqr);
+   if (!b) {
+     //printf("norm bound check failed.");
+@@ -506,6 +522,7 @@
+ 
+   /* 2*linf(h) <= m */
+   polyvec_linf (linf, h);
++  int_lshift (linf, linf, 1);
+   b = int_le (linf, m);
+   if (!b) {
+     //printf("h norm bound check failed.");
+--- a/src/lnp-quad-many.c
++++ b/src/lnp-quad-many.c
+@@ -74,7 +74,7 @@
+  * hash hash of tA1, tB.
+  * t must be a subvector of (tB,tBext).
+  */
+-void
++int
+ lnp_quad_many_prove (uint8_t hash[32], polyvec_t tB, poly_t c, polyvec_t z1,
+                      polyvec_t z21, polyvec_t h, polyvec_t s1, polyvec_t m,
+                      polyvec_t s2, polyvec_t tA2, polymat_t A1,
+@@ -91,6 +91,7 @@
+   const unsigned int nelems = 2 * (m1 + l);
+   spolymat_t R2;
+   spolyvec_t r1;
++  int accepted;
+ 
+   DEBUG_PRINTF (DEBUG_PRINT_FUNCTION_ENTRY, "%s", "lnp_quad_many_prove");
+   STOPWATCH_START (stopwatch_lnp_quad_many_prove, "lnp_quad_many_prove begin");
+@@ -140,14 +141,15 @@
+   _schwartz_zippel_poly (R2, r1, NULL, hash, R2i, r1i, NULL, N, params);
+ 
+   /* seed can be passed directly to quad sub-protocol since it is not used. */
+-  lnp_quad_prove (hash, tB, c, z1, z21, h, s1, m, s2, tA2, A1, A2prime, Bprime,
+-                  R2, r1, seed, params);
++  accepted = lnp_quad_prove (hash, tB, c, z1, z21, h, s1, m, s2, tA2, A1,
++                             A2prime, Bprime, R2, r1, seed, params);
+ 
+   spolymat_free (R2);
+   spolyvec_free (r1);
+ 
+   STOPWATCH_STOP (stopwatch_lnp_quad_many_prove);
+   DEBUG_PRINTF (DEBUG_PRINT_FUNCTION_RETURN, "%s", "lnp_quad_many_prove end");
++  return accepted;
+ }
+ 
+ int
+--- a/src/lnp-quad-eval.c
++++ b/src/lnp-quad-eval.c
+@@ -416,6 +416,7 @@
+ 
+       intvec_set_elem_i64 (coeffs, 0, 0);
+       intvec_urandom (isubv, q, log2q, seed_quad_eval, i);
++      intvec_set_elem_i64 (coeffs, d / 2, 0);
+     }
+ 
+   /* append g to message m */
+@@ -520,7 +521,7 @@
+  * R2i, r1i, r0i are dim N + lambda/2 arrays.
+  * R2i is 2*(m1+l)+lambda x 2*(m1+l)+lambda
+  */
+-void
++int
+ lnp_quad_eval_prove (uint8_t hash[32], polyvec_t tB, polyvec_t h, poly_t c,
+                      polyvec_t z1, polyvec_t z21, polyvec_t hint, polyvec_t s1,
+                      polyvec_t m, polyvec_t s2, polyvec_t tA2, polymat_t A1,
+@@ -547,6 +548,7 @@
+   uint8_t expseed[64];
+   const uint8_t *seed_quad_eval = expseed;
+   const uint8_t *seed_quad_many = expseed + 32;
++  int accepted;
+ 
+   STOPWATCH_START (stopwatch_lnp_quad_eval_prove, "lnp_quad_eval_prove");
+ 
+@@ -602,9 +604,11 @@
+ 
+   _lnp_quad_eval_prove (hash, tB, h, s1, m, s2, Bprime, R2i, r1i, Rprime2i,
+                         rprime1i, rprime0i, M, seed_quad_eval, params);
+-  lnp_quad_many_prove (hash, tB, c, z1, z21, hint, s1, m, s2, tA2, A1, A2prime,
+-                       Bprime, R2i, r1i, N_ + N, seed_quad_many, quad_many);
++  accepted = lnp_quad_many_prove (hash, tB, c, z1, z21, hint, s1, m, s2, tA2,
++                                  A1, A2prime, Bprime, R2i, r1i, N_ + N,
++                                  seed_quad_many, quad_many);
+   STOPWATCH_STOP (stopwatch_lnp_quad_eval_prove);
++  return accepted;
+ }
+ 
+ static int
+@@ -644,6 +648,9 @@
+       coeff = poly_get_coeff (poly, 0);
+       if (int_eqzero (coeff) != 1)
+         goto ret;
++      coeff = poly_get_coeff (poly, d / 2);
++      if (int_eqzero (coeff) != 1)
++        goto ret;
+     }
+ 
+   /* tB = (tB_,tg,t) */

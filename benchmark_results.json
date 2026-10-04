@@ -1,0 +1,25 @@
+{
+  "profile":"ordinary-exact-research",
+  "compiler":"15.2.0",
+  "ring_keys":65536,
+  "distinct_keys":65536,
+  "ring_kind":"synthetic-uniform-decoys-with-valid-signer",
+  "ring_bytes":16777216,
+  "projected_tables_bytes":2695680,
+  "crs_bytes":1886764,
+  "setup_seconds":0.004724506,
+  "backend_initialization_seconds":0.009812005,
+  "ring_generation_seconds":0.042022549,
+  "ring_hash_seconds":0.067079971,
+  "runs":[
+    {"success":true,"cache_state":"cold","attempts":20,"range_rejections":17,"base_rejections":2,"sampler_aborts":0,"sign_seconds":2.591533042,"verify_seconds":0.549870828,"fold_seconds":0.960777308,"range_seconds":0.040560557,"compile_seconds":0.097155184,"base_seconds":1.419162458,"signature_bytes":87634},
+    {"success":true,"cache_state":"warm","attempts":6,"range_rejections":3,"base_rejections":2,"sampler_aborts":0,"sign_seconds":1.858143713,"verify_seconds":0.536464937,"fold_seconds":0.29254442,"range_seconds":0.011613565,"compile_seconds":0.097358555,"base_seconds":1.405827837,"signature_bytes":87634},
+    {"success":true,"cache_state":"warm","attempts":16,"range_rejections":12,"base_rejections":3,"sampler_aborts":0,"sign_seconds":2.853702802,"verify_seconds":0.54247564,"fold_seconds":0.774643772,"range_seconds":0.031639827,"compile_seconds":0.123934256,"base_seconds":1.867192106,"signature_bytes":87634},
+    {"success":true,"cache_state":"warm","attempts":21,"range_rejections":17,"base_rejections":3,"sampler_aborts":0,"sign_seconds":3.190984769,"verify_seconds":0.558778972,"fold_seconds":1.018052574,"range_seconds":0.042692503,"compile_seconds":0.130566209,"base_seconds":1.938985794,"signature_bytes":87634},
+    {"success":true,"cache_state":"warm","attempts":8,"range_rejections":5,"base_rejections":2,"sampler_aborts":0,"sign_seconds":2.004545884,"verify_seconds":0.561149445,"fold_seconds":0.390891544,"range_seconds":0.016279758,"compile_seconds":0.096964065,"base_seconds":1.446027259,"signature_bytes":87634}
+  ],
+  "successful_runs":5,
+  "integration_tests":false,
+  "peak_process_rss_kib":134348,
+  "security_certified":false
+}

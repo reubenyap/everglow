@@ -1,0 +1,22 @@
+{
+  "profile":"bimodal-exact-research",
+  "encoding":"raw",
+  "compiler":"15.2.0",
+  "ring_keys":65536,
+  "distinct_keys":65536,
+  "ring_kind":"synthetic-uniform-decoys-with-valid-signer",
+  "ring_bytes":16777216,
+  "projected_tables_bytes":2695680,
+  "crs_bytes":1886764,
+  "setup_seconds":0.004555214,
+  "backend_initialization_seconds":0.009796158,
+  "ring_generation_seconds":0.037793333,
+  "ring_hash_seconds":0.052426144,
+  "runs":[
+    {"success":true,"cache_state":"cold","attempts":9,"range_rejections":4,"base_rejections":4,"sampler_aborts":0,"sign_seconds":3.049053221,"verify_seconds":0.555983029,"encode_seconds":4.1609e-05,"decode_seconds":1.4668e-05,"fold_seconds":0.413793089,"range_seconds":0.017870386,"compile_seconds":0.156384722,"base_seconds":2.392736798,"signature_bytes":87634}
+  ],
+  "successful_runs":1,
+  "integration_tests":false,
+  "peak_process_rss_kib":134468,
+  "security_certified":false
+}

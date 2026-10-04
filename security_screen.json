@@ -1,0 +1,554 @@
+{
+  "started_utc": "2026-10-02T09:49:49.622115+00:00",
+  "estimator_commit": "53da5982597709ba0fdf94ea37a84d822310fd84",
+  "sage_version": "10.8",
+  "python_version": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "phase": "screen",
+  "widths": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "assumptions": [
+    "Fixed public A,B each have two ring rows; degree 64; one distinct Bs tag.",
+    "Invertible four-column ring block permits binary-secret/binary-error systematization.",
+    "Plain-LWE flattening is heuristic and does not model module-specific cryptanalysis.",
+    "Finite sample count is 256, independently of scheme width.",
+    "GSA and quantum Core-SVP costs are heuristics, not measured quantum hardware costs.",
+    "Hybrid guessing and probability handling retain the official classical/MITM model.",
+    "MATZOV dual is excluded because its default sample count is n at this revision.",
+    "No proof soundness, Module-SIS, multi-target, or complete LRS security assessment."
+  ],
+  "results": [
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^118.0, red: \u22482^118.0, \u03b4: 1.003617, \u03b2: 459, d: 1024, tag: usvp",
+      "components": {
+        "rop": "3.23892863075591e35",
+        "red": "3.23892863075591e35",
+        "delta": "1.00361680894175",
+        "beta": "459",
+        "d": "1024",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 117.96300000000001,
+        "red": 117.96300000000001
+      },
+      "elapsed_seconds": 0.04593563499999931
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^121.6, red: \u22482^121.6, \u03b4: 1.003617, \u03b2: 459, d: 1024, tag: usvp",
+      "components": {
+        "rop": "4.12841666602802e36",
+        "red": "4.12841666602802e36",
+        "delta": "1.00361680894175",
+        "beta": "459",
+        "d": "1024",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 121.635,
+        "red": 121.635
+      },
+      "elapsed_seconds": 0.029611041000002558
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^133.6, red: \u22482^133.6, \u03b4: 1.003310, \u03b2: 520, d: 1088, tag: usvp",
+      "components": {
+        "rop": "1.69687019128215e40",
+        "red": "1.69687019128215e40",
+        "delta": "1.00331007098761",
+        "beta": "520",
+        "d": "1088",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 133.64000000000001,
+        "red": 133.64000000000001
+      },
+      "elapsed_seconds": 0.030820968999996978
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^137.8, red: \u22482^137.8, \u03b4: 1.003310, \u03b2: 520, d: 1088, tag: usvp",
+      "components": {
+        "rop": "3.03342598351630e41",
+        "red": "3.03342598351630e41",
+        "delta": "1.00331007098761",
+        "beta": "520",
+        "d": "1088",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 137.8,
+        "red": 137.8
+      },
+      "elapsed_seconds": 0.032572442999999396
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^149.8, red: \u22482^149.8, \u03b4: 1.003049, \u03b2: 583, d: 1152, tag: usvp",
+      "components": {
+        "rop": "1.26947829628354e45",
+        "red": "1.26947829628354e45",
+        "delta": "1.00304862110164",
+        "beta": "583",
+        "d": "1152",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 149.83100000000002,
+        "red": 149.83100000000002
+      },
+      "elapsed_seconds": 0.029384421999999688
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^154.5, red: \u22482^154.5, \u03b4: 1.003049, \u03b2: 583, d: 1152, tag: usvp",
+      "components": {
+        "rop": "3.21831967369452e46",
+        "red": "3.21831967369452e46",
+        "delta": "1.00304862110164",
+        "beta": "583",
+        "d": "1152",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 154.495,
+        "red": 154.495
+      },
+      "elapsed_seconds": 0.02998399800000584
+    },
+    {
+      "scheme_width": 19,
+      "input": {
+        "n": 960,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=960, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^166.5, red: \u22482^166.5, \u03b4: 1.002823, \u03b2: 648, d: 1216, tag: usvp",
+      "components": {
+        "rop": "1.35622378898893e50",
+        "red": "1.35622378898893e50",
+        "delta": "1.00282296530647",
+        "beta": "648",
+        "d": "1216",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=960, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 166.536,
+        "red": 166.536
+      },
+      "elapsed_seconds": 0.036743285000000014
+    },
+    {
+      "scheme_width": 19,
+      "input": {
+        "n": 960,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=960, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^171.7, red: \u22482^171.7, \u03b4: 1.002823, \u03b2: 648, d: 1216, tag: usvp",
+      "components": {
+        "rop": "4.93027172445217e51",
+        "red": "4.93027172445217e51",
+        "delta": "1.00282296530647",
+        "beta": "648",
+        "d": "1216",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=960, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 171.72,
+        "red": 171.72
+      },
+      "elapsed_seconds": 0.035732766999998944
+    },
+    {
+      "scheme_width": 20,
+      "input": {
+        "n": 1024,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1024, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^183.5, red: \u22482^183.5, \u03b4: 1.002629, \u03b2: 714, d: 1280, tag: usvp",
+      "components": {
+        "rop": "1.73141886183027e55",
+        "red": "1.73141886183027e55",
+        "delta": "1.00262884352821",
+        "beta": "714",
+        "d": "1280",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1024, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 183.498,
+        "red": 183.498
+      },
+      "elapsed_seconds": 0.03483989999999437
+    },
+    {
+      "scheme_width": 20,
+      "input": {
+        "n": 1024,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1024, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^189.2, red: \u22482^189.2, \u03b4: 1.002629, \u03b2: 714, d: 1280, tag: usvp",
+      "components": {
+        "rop": "9.07581175811648e56",
+        "red": "9.07581175811648e56",
+        "delta": "1.00262884352821",
+        "beta": "714",
+        "d": "1280",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1024, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 189.21,
+        "red": 189.21
+      },
+      "elapsed_seconds": 0.03412518399999698
+    },
+    {
+      "scheme_width": 21,
+      "input": {
+        "n": 1088,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1088, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^201.0, red: \u22482^201.0, \u03b4: 1.002458, \u03b2: 782, d: 1344, tag: usvp",
+      "components": {
+        "rop": "3.15647496080378e60",
+        "red": "3.15647496080378e60",
+        "delta": "1.00245753497935",
+        "beta": "782",
+        "d": "1344",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1088, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 200.97400000000002,
+        "red": 200.97400000000002
+      },
+      "elapsed_seconds": 0.036413541000001715
+    },
+    {
+      "scheme_width": 21,
+      "input": {
+        "n": 1088,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1088, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^207.2, red: \u22482^207.2, \u03b4: 1.002458, \u03b2: 782, d: 1344, tag: usvp",
+      "components": {
+        "rop": "2.41238156743333e62",
+        "red": "2.41238156743333e62",
+        "delta": "1.00245753497935",
+        "beta": "782",
+        "d": "1344",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1088, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 207.23000000000002,
+        "red": 207.23000000000002
+      },
+      "elapsed_seconds": 0.038150027000000364
+    },
+    {
+      "scheme_width": 22,
+      "input": {
+        "n": 1152,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1152, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^218.7, red: \u22482^218.7, \u03b4: 1.002307, \u03b2: 851, d: 1408, tag: usvp",
+      "components": {
+        "rop": "6.87649706056066e65",
+        "red": "6.87649706056066e65",
+        "delta": "1.00230725046793",
+        "beta": "851",
+        "d": "1408",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1152, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 218.707,
+        "red": 218.707
+      },
+      "elapsed_seconds": 0.03873257099999705
+    },
+    {
+      "scheme_width": 22,
+      "input": {
+        "n": 1152,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1152, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^225.5, red: \u22482^225.5, \u03b4: 1.002307, \u03b2: 851, d: 1408, tag: usvp",
+      "components": {
+        "rop": "7.70512115901821e67",
+        "red": "7.70512115901821e67",
+        "delta": "1.00230725046793",
+        "beta": "851",
+        "d": "1408",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1152, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 225.51500000000001,
+        "red": 225.51500000000001
+      },
+      "elapsed_seconds": 0.034995223999999325
+    },
+    {
+      "scheme_width": 23,
+      "input": {
+        "n": 1216,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1216, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^236.7, red: \u22482^236.7, \u03b4: 1.002174, \u03b2: 921, d: 1472, tag: usvp",
+      "components": {
+        "rop": "1.79018075360138e71",
+        "red": "1.79018075360138e71",
+        "delta": "1.00217422804670",
+        "beta": "921",
+        "d": "1472",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1216, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 236.697,
+        "red": 236.697
+      },
+      "elapsed_seconds": 0.033540072000000976
+    },
+    {
+      "scheme_width": 23,
+      "input": {
+        "n": 1216,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1216, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^244.1, red: \u22482^244.1, \u03b4: 1.002174, \u03b2: 921, d: 1472, tag: usvp",
+      "components": {
+        "rop": "2.95723536861014e73",
+        "red": "2.95723536861014e73",
+        "delta": "1.00217422804670",
+        "beta": "921",
+        "d": "1472",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1216, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 244.06500000000003,
+        "red": 244.06500000000003
+      },
+      "elapsed_seconds": 0.033761144999999715
+    },
+    {
+      "scheme_width": 24,
+      "input": {
+        "n": 1280,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1280, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^254.9, red: \u22482^254.9, \u03b4: 1.002056, \u03b2: 992, d: 1536, tag: usvp",
+      "components": {
+        "rop": "5.56917948351847e76",
+        "red": "5.56917948351847e76",
+        "delta": "1.00205556860399",
+        "beta": "992",
+        "d": "1536",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1280, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 254.94400000000002,
+        "red": 254.94400000000002
+      },
+      "elapsed_seconds": 0.0352113129999978
+    },
+    {
+      "scheme_width": 24,
+      "input": {
+        "n": 1280,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=1280, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^262.9, red: \u22482^262.9, \u03b4: 1.002056, \u03b2: 992, d: 1536, tag: usvp",
+      "components": {
+        "rop": "1.36384576711976e79",
+        "red": "1.36384576711976e79",
+        "delta": "1.00205556860399",
+        "beta": "992",
+        "d": "1536",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=1280, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 262.88,
+        "red": 262.88
+      },
+      "elapsed_seconds": 0.03720801699999754
+    }
+  ],
+  "first_screen_width_at_least_128": 17,
+  "finished_utc": "2026-10-02T09:49:50.486143+00:00"
+}

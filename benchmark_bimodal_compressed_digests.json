@@ -1,0 +1,8 @@
+{
+  ".manifest.json": "54a9df83d8489cf30f33a2a374a1631d7e02eed3acdc9c81ae8a63980d8a9f18",
+  ".statement.bin": "fb7a3f1877371ecc6d15cc8b36947811fadc65188c2f524825ba0f37c0871e57",
+  ".crs.bin": "dc78084da368e965813ed3e4aa2a8bc19a4ac1dd6abddfbc2f8bd22779a5fb98",
+  ".ring.bin": "a30357e9dba90ec8e38bfd2be07d57172480f0adfb4434e58164caba168179dc",
+  ".message.bin": "0e89820860c342f2c7ec694d144023b10301c2accdd078cb5167a06d0c3d5bcc",
+  ".signature.bin": "ac82bcdda852d66b356db3a1b322858836bf97f702e0d8286a18b38f23c7f6a6"
+}

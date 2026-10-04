@@ -1,0 +1,841 @@
+{
+  "started_utc": "2026-10-02T09:50:27.449858+00:00",
+  "estimator_commit": "53da5982597709ba0fdf94ea37a84d822310fd84",
+  "sage_version": "10.8",
+  "python_version": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "phase": "full",
+  "widths": [
+    16,
+    17,
+    18
+  ],
+  "assumptions": [
+    "Fixed public A,B each have two ring rows; degree 64; one distinct Bs tag.",
+    "Invertible four-column ring block permits binary-secret/binary-error systematization.",
+    "Plain-LWE flattening is heuristic and does not model module-specific cryptanalysis.",
+    "Finite sample count is 256, independently of scheme width.",
+    "GSA and quantum Core-SVP costs are heuristics, not measured quantum hardware costs.",
+    "Hybrid guessing and probability handling retain the official classical/MITM model.",
+    "MATZOV dual is excluded because its default sample count is n at this revision.",
+    "No proof soundness, Module-SIS, multi-target, or complete LRS security assessment."
+  ],
+  "results": [
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^118.0, red: \u22482^118.0, \u03b4: 1.003617, \u03b2: 459, d: 1024, tag: usvp",
+      "components": {
+        "rop": "3.23892863075591e35",
+        "red": "3.23892863075591e35",
+        "delta": "1.00361680894175",
+        "beta": "459",
+        "d": "1024",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 117.96300000000001,
+        "red": 117.96300000000001
+      },
+      "elapsed_seconds": 0.048247969000001945
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^118.7, red: \u22482^117.7, svp: \u22482^117.7, \u03b2: 458, \u03b7: 457, d: 1024, tag: bdd",
+      "components": {
+        "rop": "5.42084095279023e35",
+        "red": "2.71042047639512e35",
+        "svp": "2.71042047639512e35",
+        "beta": "458",
+        "eta": "457",
+        "d": "1024",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 118.706,
+        "red": 117.706,
+        "svp": 117.706
+      },
+      "elapsed_seconds": 0.15420057699999745
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^118.7, red: \u22482^117.7, svp: \u22482^117.7, \u03b2: 458, \u03b7: 457, \u03b6: 0, |S|: 1, d: 1024, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "5.42084095279023e35",
+        "red": "2.71042047639512e35",
+        "svp": "2.71042047639512e35",
+        "beta": "458",
+        "eta": "457",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1024",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 118.706,
+        "red": 117.706,
+        "svp": 117.706
+      },
+      "elapsed_seconds": 5.472935980000003
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^178.6, red: \u22482^168.3, svp: \u22482^178.6, \u03b2: 459, \u03b7: 2, \u03b6: 218, |S|: \u22482^218.0, d: 806, prob: \u22482^-48.1, \u21bb: \u22482^50.3, tag: hybrid",
+      "components": {
+        "rop": "5.77465287054459e53",
+        "red": "4.47242194364205e50",
+        "svp": "5.77018044860095e53",
+        "beta": "459",
+        "eta": "2",
+        "zeta": "218",
+        "|S|": "413766990235788670367904681377553174364142869542586038808500865312",
+        "d": "806",
+        "prob": "3.33506492742808e-15",
+        "repetitions": "1380833742730006",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 178.5919232540012,
+        "red": 168.25746104777372,
+        "svp": 178.59080546544533
+      },
+      "elapsed_seconds": 13.660863097000004
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^121.6, red: \u22482^121.6, \u03b4: 1.003617, \u03b2: 459, d: 1024, tag: usvp",
+      "components": {
+        "rop": "4.12841666602802e36",
+        "red": "4.12841666602802e36",
+        "delta": "1.00361680894175",
+        "beta": "459",
+        "d": "1024",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 121.635,
+        "red": 121.635
+      },
+      "elapsed_seconds": 0.04179133699999227
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^122.4, red: \u22482^121.4, svp: \u22482^121.4, \u03b2: 458, \u03b7: 457, d: 1024, tag: bdd",
+      "components": {
+        "rop": "6.87132625166097e36",
+        "red": "3.43566312583048e36",
+        "svp": "3.43566312583048e36",
+        "beta": "458",
+        "eta": "457",
+        "d": "1024",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 122.37,
+        "red": 121.37,
+        "svp": 121.37
+      },
+      "elapsed_seconds": 0.4282061870000007
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^122.4, red: \u22482^121.4, svp: \u22482^121.4, \u03b2: 458, \u03b7: 457, \u03b6: 0, |S|: 1, d: 1024, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "6.87132625166097e36",
+        "red": "3.43566312583048e36",
+        "svp": "3.43566312583048e36",
+        "beta": "458",
+        "eta": "457",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1024",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 122.37,
+        "red": 121.37,
+        "svp": 121.37
+      },
+      "elapsed_seconds": 5.973004196000005
+    },
+    {
+      "scheme_width": 16,
+      "input": {
+        "n": 768,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^178.6, red: \u22482^171.4, svp: \u22482^178.6, \u03b2: 459, \u03b7: 2, \u03b6: 219, |S|: \u22482^219.0, d: 805, prob: \u22482^-47.6, \u21bb: \u22482^49.8, tag: hybrid",
+      "components": {
+        "rop": "5.82582041064311e53",
+        "red": "4.05864072195729e51",
+        "svp": "5.78523400342354e53",
+        "beta": "459",
+        "eta": "2",
+        "zeta": "219",
+        "|S|": "824639563541367267859348342969438674538685372514455100350461502624",
+        "d": "805",
+        "prob": "4.68434203670039e-15",
+        "repetitions": "983098618740473",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=768, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 178.60465025802856,
+        "red": 171.43932947503103,
+        "svp": 178.5945643442404
+      },
+      "elapsed_seconds": 15.035583032999995
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^133.6, red: \u22482^133.6, \u03b4: 1.003310, \u03b2: 520, d: 1088, tag: usvp",
+      "components": {
+        "rop": "1.69687019128215e40",
+        "red": "1.69687019128215e40",
+        "delta": "1.00331007098761",
+        "beta": "520",
+        "d": "1088",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 133.64000000000001,
+        "red": 133.64000000000001
+      },
+      "elapsed_seconds": 0.032900931000000355
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^134.4, red: \u22482^132.6, svp: \u22482^133.9, \u03b2: 516, \u03b7: 520, d: 1088, tag: bdd",
+      "components": {
+        "rop": "2.85987228241755e40",
+        "red": "8.32127328051773e39",
+        "svp": "2.02774495436578e40",
+        "beta": "516",
+        "eta": "520",
+        "d": "1088",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 134.3930745153523,
+        "red": 132.612,
+        "svp": 133.897
+      },
+      "elapsed_seconds": 0.12440702300000339
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^134.4, red: \u22482^132.6, svp: \u22482^133.9, \u03b2: 516, \u03b7: 520, \u03b6: 0, |S|: 1, d: 1088, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "2.85987228241755e40",
+        "red": "8.32127328051773e39",
+        "svp": "2.02774495436578e40",
+        "beta": "516",
+        "eta": "520",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1088",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 134.3930745153523,
+        "red": 132.612,
+        "svp": 133.897
+      },
+      "elapsed_seconds": 6.498130057999987
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^198.5, red: \u22482^188.5, svp: \u22482^198.5, \u03b2: 521, \u03b7: 2, \u03b6: 249, |S|: \u22482^249.0, d: 839, prob: \u22482^-52.4, \u21bb: \u22482^54.6, tag: hybrid",
+      "components": {
+        "rop": "5.70456810394272e59",
+        "red": "5.51702870986418e56",
+        "svp": "5.69905107523286e59",
+        "beta": "521",
+        "eta": "2",
+        "zeta": "249",
+        "|S|": "885469131778691036712475841480427929154836887696880241897112307297727443056",
+        "d": "839",
+        "prob": "1.69259779125981e-16",
+        "repetitions": "27207705278644091",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 198.50587526175056,
+        "red": 188.49186480177084,
+        "svp": 198.50447932061013
+      },
+      "elapsed_seconds": 18.015382138999996
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^137.8, red: \u22482^137.8, \u03b4: 1.003310, \u03b2: 520, d: 1088, tag: usvp",
+      "components": {
+        "rop": "3.03342598351630e41",
+        "red": "3.03342598351630e41",
+        "delta": "1.00331007098761",
+        "beta": "520",
+        "d": "1088",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 137.8,
+        "red": 137.8
+      },
+      "elapsed_seconds": 0.03155669500000613
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^138.5, red: \u22482^136.7, svp: \u22482^138.1, \u03b2: 516, \u03b7: 520, d: 1088, tag: bdd",
+      "components": {
+        "rop": "5.10000236767266e41",
+        "red": "1.45492835230807e41",
+        "svp": "3.64507401536459e41",
+        "beta": "516",
+        "eta": "520",
+        "d": "1088",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 138.54954980723633,
+        "red": 136.74,
+        "svp": 138.065
+      },
+      "elapsed_seconds": 0.12040908000000172
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^138.5, red: \u22482^136.7, svp: \u22482^138.1, \u03b2: 516, \u03b7: 520, \u03b6: 0, |S|: 1, d: 1088, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "5.10000236767266e41",
+        "red": "1.45492835230807e41",
+        "svp": "3.64507401536459e41",
+        "beta": "516",
+        "eta": "520",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1088",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 138.54954980723633,
+        "red": 136.74,
+        "svp": 138.065
+      },
+      "elapsed_seconds": 5.768130575000015
+    },
+    {
+      "scheme_width": 17,
+      "input": {
+        "n": 832,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^198.5, red: \u22482^192.2, svp: \u22482^198.5, \u03b2: 521, \u03b7: 2, \u03b6: 250, |S|: \u22482^250.0, d: 838, prob: \u22482^-51.9, \u21bb: \u22482^54.1, tag: hybrid",
+      "components": {
+        "rop": "5.78304249265515e59",
+        "red": "7.05921384230044e57",
+        "svp": "5.71245035423215e59",
+        "beta": "521",
+        "eta": "2",
+        "zeta": "250",
+        "|S|": "1764285356774440724654949147728459498261042534646426825702668311546952907188",
+        "d": "838",
+        "prob": "2.37791155733096e-16",
+        "repetitions": "19366448561935025",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=832, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 198.52558630115323,
+        "red": 192.1694089335822,
+        "svp": 198.50786732040442
+      },
+      "elapsed_seconds": 18.064503790999993
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^149.8, red: \u22482^149.8, \u03b4: 1.003049, \u03b2: 583, d: 1152, tag: usvp",
+      "components": {
+        "rop": "1.26947829628354e45",
+        "red": "1.26947829628354e45",
+        "delta": "1.00304862110164",
+        "beta": "583",
+        "d": "1152",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 149.83100000000002,
+        "red": 149.83100000000002
+      },
+      "elapsed_seconds": 0.030275788000011516
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^150.5, red: \u22482^149.1, svp: \u22482^149.8, \u03b2: 580, \u03b7: 582, d: 1152, tag: bdd",
+      "components": {
+        "rop": "2.01340672222627e45",
+        "red": "7.43928425942728e44",
+        "svp": "1.26947829628354e45",
+        "beta": "580",
+        "eta": "582",
+        "d": "1152",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 150.4964029061093,
+        "red": 149.06,
+        "svp": 149.83100000000002
+      },
+      "elapsed_seconds": 0.12304464999999709
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^150.5, red: \u22482^149.1, svp: \u22482^149.8, \u03b2: 580, \u03b7: 582, \u03b6: 0, |S|: 1, d: 1152, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "2.01340672222627e45",
+        "red": "7.43928425942728e44",
+        "svp": "1.26947829628354e45",
+        "beta": "580",
+        "eta": "582",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1152",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 150.4964029061093,
+        "red": 149.06,
+        "svp": 149.83100000000002
+      },
+      "elapsed_seconds": 6.644739546000011
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ChaLoy21_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^219.5, red: \u22482^208.8, svp: \u22482^219.5, \u03b2: 583, \u03b7: 2, \u03b6: 282, |S|: \u22482^282.0, d: 870, prob: \u22482^-56.8, \u21bb: \u22482^59.0, tag: hybrid",
+      "components": {
+        "rop": "1.16381424449325e66",
+        "red": "7.08575312398467e62",
+        "svp": "1.16310566918085e66",
+        "beta": "583",
+        "eta": "2",
+        "zeta": "282",
+        "|S|": "7579487855818424374651042511548766720782724685798376566365142826779142552049607912128",
+        "d": "870",
+        "prob": "8.25058889225927e-18",
+        "repetitions": "558162604648581676",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 219.46611507172793,
+        "red": 208.7844630841476,
+        "svp": 219.4652364354544
+      },
+      "elapsed_seconds": 22.537163287
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_usvp",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^154.5, red: \u22482^154.5, \u03b4: 1.003049, \u03b2: 583, d: 1152, tag: usvp",
+      "components": {
+        "rop": "3.21831967369452e46",
+        "red": "3.21831967369452e46",
+        "delta": "1.00304862110164",
+        "beta": "583",
+        "d": "1152",
+        "tag": "usvp",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 154.495,
+        "red": 154.495
+      },
+      "elapsed_seconds": 0.03130844999998317
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_bdd",
+      "options": {},
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^155.2, red: \u22482^153.7, svp: \u22482^154.5, \u03b2: 580, \u03b7: 582, d: 1152, tag: bdd",
+      "components": {
+        "rop": "5.07317624744546e46",
+        "red": "1.85485657375094e46",
+        "svp": "3.21831967369452e46",
+        "beta": "580",
+        "eta": "582",
+        "d": "1152",
+        "tag": "bdd",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 155.15158164689203,
+        "red": 153.70000000000002,
+        "svp": 154.495
+      },
+      "elapsed_seconds": 0.12584829300001843
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_hybrid",
+      "options": {
+        "mitm": false,
+        "babai": false
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^155.2, red: \u22482^153.7, svp: \u22482^154.5, \u03b2: 580, \u03b7: 582, \u03b6: 0, |S|: 1, d: 1152, prob: 1.0, \u21bb: 1, tag: hybrid",
+      "components": {
+        "rop": "5.07317624744546e46",
+        "red": "1.85485657375094e46",
+        "svp": "3.21831967369452e46",
+        "beta": "580",
+        "eta": "582",
+        "zeta": "0",
+        "|S|": "1",
+        "d": "1152",
+        "prob": "1.0",
+        "repetitions": "1",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 155.15158164689203,
+        "red": 153.70000000000002,
+        "svp": 154.495
+      },
+      "elapsed_seconds": 6.813909985000009
+    },
+    {
+      "scheme_width": 18,
+      "input": {
+        "n": 896,
+        "q": 65437,
+        "m": 256
+      },
+      "input_repr": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)",
+      "model": "ADPS16_quantum_core",
+      "algorithm": "primal_mitm_hybrid",
+      "options": {
+        "mitm": true,
+        "babai": true
+      },
+      "shape_model": "gsa",
+      "status": "ok",
+      "raw_repr": "rop: \u22482^219.5, red: \u22482^213.0, svp: \u22482^219.5, \u03b2: 583, \u03b7: 2, \u03b6: 283, |S|: \u22482^283.0, d: 869, prob: \u22482^-56.3, \u21bb: \u22482^58.5, tag: hybrid",
+      "components": {
+        "rop": "1.17669786806222e66",
+        "red": "1.27657460612497e64",
+        "svp": "1.16393212200097e66",
+        "beta": "583",
+        "eta": "2",
+        "zeta": "283",
+        "|S|": "15098790530676726996395854658758896492208552165531771707264398564666002678873387807744",
+        "d": "869",
+        "prob": "1.16099049277391e-17",
+        "repetitions": "396658733611601227",
+        "tag": "hybrid",
+        "problem": "LWEParameters(n=896, q=65437, Xs=D(\u03c3=0.50, \u03bc=0.50), Xe=D(\u03c3=0.50, \u03bc=0.50), m=256, tag=None)"
+      },
+      "log2_components": {
+        "rop": 219.48199820044192,
+        "red": 212.95567592760733,
+        "svp": 219.46626118841692
+      },
+      "elapsed_seconds": 22.093083724999985
+    }
+  ],
+  "finished_utc": "2026-10-02T09:52:56.873485+00:00"
+}

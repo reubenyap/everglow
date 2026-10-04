@@ -1,0 +1,4 @@
+[submodule "src/labrados"]
+	path = src/labrados
+	url = https://github.com/lazer-crypto/labrador.git
+	branch = main

@@ -1,0 +1,15 @@
+/build/
+/build-sanitize/
+/analysis/
+__pycache__/
+/benchmark_local.json*
+/benchmark_first.json*
+/benchmark_sanitize.json*
+/benchmark_*.bin
+/vendor/lazer-source.tar.gz
+/vendor/lazer/lazer.h
+/vendor/lazer/lib*.a
+/vendor/lazer/lib*.so
+/vendor/lazer/src/*.o
+/vendor/lazer/third_party/Falcon-impl-20211101/
+/vendor/lazer/third_party/hexl-development/

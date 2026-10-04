@@ -1,0 +1,22 @@
+{
+  "profile":"ordinary-exact-research",
+  "encoding":"compressed",
+  "compiler":"15.2.0",
+  "ring_keys":65536,
+  "distinct_keys":65536,
+  "ring_kind":"synthetic-uniform-decoys-with-valid-signer",
+  "ring_bytes":16777216,
+  "projected_tables_bytes":2695680,
+  "crs_bytes":1886764,
+  "setup_seconds":0.004558299,
+  "backend_initialization_seconds":0.010050539,
+  "ring_generation_seconds":0.038052154,
+  "ring_hash_seconds":0.048703623,
+  "runs":[
+    {"success":true,"cache_state":"cold","attempts":26,"range_rejections":19,"base_rejections":6,"sampler_aborts":0,"sign_seconds":4.864433175,"verify_seconds":0.550930633,"encode_seconds":0.001057905,"decode_seconds":0.000212483,"fold_seconds":1.2475979,"range_seconds":0.050368913,"compile_seconds":0.21820992,"base_seconds":3.282581368,"signature_bytes":40182}
+  ],
+  "successful_runs":1,
+  "integration_tests":false,
+  "peak_process_rss_kib":134472,
+  "security_certified":false
+}
