@@ -1,0 +1,1539 @@
+{
+  "status": "fixed_Q_numerical_screen_not_full_quantum_security",
+  "driver_sha256": "b9fa47f67edeaf470574e7af7a5b422e9cc8a49f88b2aa1433f532a7fcbb9107",
+  "estimator_commit": "53da5982597709ba0fdf94ea37a84d822310fd84",
+  "sage_version": "10.8",
+  "fixed": {
+    "Q": 1151179879138398721,
+    "p": 65437,
+    "q2": 17592186058933,
+    "secret_width": 18,
+    "d": 64,
+    "k_sis": 20,
+    "m1": 23,
+    "m2": 95,
+    "eta": 504,
+    "sigma1": "126976/5",
+    "sigma2": "253952/5"
+  },
+  "Q_minus_one_factors": [
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      1103,
+      1
+    ],
+    [
+      3484511087,
+      1
+    ]
+  ],
+  "even_divisor_count": 432,
+  "assumptions": [
+    "B2=2*sigma2*sqrt(2*m2*d)+(eta*2^D+gamma)*sqrt(k_sis*d), including conservative D=0 term.",
+    "Native rejection on c*s2 occurs before subtracting c*tA2 and w0; isolated M2 condition is unchanged.",
+    "SIS estimates flatten the module; they do not establish hint/Extended-MLWE or QROM security.",
+    "Width-18 key-recovery problem and plain-LWE dimensions are held fixed, not re-estimated.",
+    "Security thresholds constrain only the minimum of the two selected quantum Core-SVP SIS estimates.",
+    "Theorem arithmetic domain: positive even gamma divides Q-1; D ranges 0..30 in the exhaustive arithmetic grid.",
+    "The optional gamma > 2^(D+8) generator efficiency rule is not treated as a theorem requirement.",
+    "Size fields count commitment bits and an unattainable-in-general all-zero hint lower bound."
+  ],
+  "selected": [
+    {
+      "D": 0,
+      "gamma": 512,
+      "m": 2248398201442185,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 31572639091752,
+      "MSIS_beta_ceil": 23326878867,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 60,
+      "rounded_tA_maximum": 1151179879138398720,
+      "tA_bytes": 9600,
+      "tA_gross_savings_bytes": 0,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 1124199100721092,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 23326878867,
+          "log2_rop": 203.232,
+          "raw": "rop: \u22482^203.2, red: \u22482^203.2, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 23326878867,
+          "log2_rop": 178.872,
+          "raw": "rop: \u22482^178.9, red: \u22482^178.9, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 23326878867,
+          "log2_rop": 184.44,
+          "raw": "rop: \u22482^184.4, red: \u22482^184.4, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 356479,
+          "log2_rop": 688.2439999999999,
+          "raw": "rop: \u22482^688.2, red: \u22482^688.2, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 356479,
+          "log2_rop": 605.749,
+          "raw": "rop: \u22482^605.7, red: \u22482^605.7, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 356479,
+          "log2_rop": 624.605,
+          "raw": "rop: \u22482^624.6, red: \u22482^624.6, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 178.872
+    },
+    {
+      "D": 8,
+      "gamma": 66180,
+      "m": 17394679346304,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 82677086100636,
+      "MSIS_beta_ceil": 37080311477,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 52,
+      "rounded_tA_maximum": 4496796402884370,
+      "tA_bytes": 8320,
+      "tA_gross_savings_bytes": 1280,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 8697339673152,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 37080311477,
+          "log2_rop": 192.72,
+          "raw": "rop: \u22482^192.7, red: \u22482^192.7, \u03b4: 1.002785, \u03b2: 660, d: 4374, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 37080311477,
+          "log2_rop": 169.62,
+          "raw": "rop: \u22482^169.6, red: \u22482^169.6, \u03b4: 1.002785, \u03b2: 660, d: 4374, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 37080311477,
+          "log2_rop": 174.9,
+          "raw": "rop: \u22482^174.9, red: \u22482^174.9, \u03b4: 1.002785, \u03b2: 660, d: 4374, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 566657,
+          "log2_rop": 629.26,
+          "raw": "rop: \u22482^629.3, red: \u22482^629.3, \u03b4: 1.001125, \u03b2: 2155, d: 5893, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 566657,
+          "log2_rop": 553.835,
+          "raw": "rop: \u22482^553.8, red: \u22482^553.8, \u03b4: 1.001125, \u03b2: 2155, d: 5893, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 566657,
+          "log2_rop": 571.075,
+          "raw": "rop: \u22482^571.1, red: \u22482^571.1, \u03b4: 1.001125, \u03b2: 2155, d: 5893, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 169.62
+    },
+    {
+      "D": 10,
+      "gamma": 264720,
+      "m": 4348669836576,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 382923845178788,
+      "MSIS_beta_ceil": 79095311287,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 50,
+      "rounded_tA_maximum": 1124199100721092,
+      "tA_bytes": 8000,
+      "tA_gross_savings_bytes": 1600,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 2174334918288,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 79095311287,
+          "log2_rop": 177.244,
+          "raw": "rop: \u22482^177.2, red: \u22482^177.2, \u03b4: 1.002961, \u03b2: 607, d: 4242, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 79095311287,
+          "log2_rop": 155.999,
+          "raw": "rop: \u22482^156.0, red: \u22482^156.0, \u03b4: 1.002961, \u03b2: 607, d: 4242, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 79095311287,
+          "log2_rop": 160.85500000000002,
+          "raw": "rop: \u22482^160.9, red: \u22482^160.9, \u03b4: 1.002961, \u03b2: 607, d: 4242, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 1208725,
+          "log2_rop": 546.9159999999999,
+          "raw": "rop: \u22482^546.9, red: \u22482^546.9, \u03b4: 1.001257, \u03b2: 1873, d: 5574, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 1208725,
+          "log2_rop": 481.361,
+          "raw": "rop: \u22482^481.4, red: \u22482^481.4, \u03b4: 1.001257, \u03b2: 1873, d: 5574, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 1208725,
+          "log2_rop": 496.345,
+          "raw": "rop: \u22482^496.3, red: \u22482^496.3, \u03b4: 1.001257, \u03b2: 1873, d: 5574, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 155.999
+    },
+    {
+      "D": 11,
+      "gamma": 529440,
+      "m": 2174334918288,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 1124670087762351,
+      "MSIS_beta_ceil": 135331647205,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 49,
+      "rounded_tA_maximum": 562099550360546,
+      "tA_bytes": 7840,
+      "tA_gross_savings_bytes": 1760,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 1087167459144,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 135331647205,
+          "log2_rop": 167.316,
+          "raw": "rop: \u22482^167.3, red: \u22482^167.3, \u03b4: 1.003087, \u03b2: 573, d: 4153, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 135331647205,
+          "log2_rop": 147.261,
+          "raw": "rop: \u22482^147.3, red: \u22482^147.3, \u03b4: 1.003087, \u03b2: 573, d: 4153, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 135331647205,
+          "log2_rop": 151.845,
+          "raw": "rop: \u22482^151.8, red: \u22482^151.8, \u03b4: 1.003087, \u03b2: 573, d: 4153, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 2068122,
+          "log2_rop": 496.984,
+          "raw": "rop: \u22482^497.0, red: \u22482^497.0, \u03b4: 1.001355, \u03b2: 1702, d: 5368, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 2068122,
+          "log2_rop": 437.414,
+          "raw": "rop: \u22482^437.4, red: \u22482^437.4, \u03b4: 1.001355, \u03b2: 1702, d: 5368, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 2068122,
+          "log2_rop": 451.03000000000003,
+          "raw": "rop: \u22482^451.0, red: \u22482^451.0, \u03b4: 1.001355, \u03b2: 1702, d: 5368, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 147.261
+    },
+    {
+      "D": 12,
+      "gamma": 1058880,
+      "m": 1087167459144,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 3778735934572997,
+      "MSIS_beta_ceil": 247915039690,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 48,
+      "rounded_tA_maximum": 281049775180273,
+      "tA_bytes": 7680,
+      "tA_gross_savings_bytes": 1920,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 543583729572,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 247915039690,
+          "log2_rop": 156.804,
+          "raw": "rop: \u22482^156.8, red: \u22482^156.8, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 247915039690,
+          "log2_rop": 138.00900000000001,
+          "raw": "rop: \u22482^138.0, red: \u22482^138.0, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 247915039690,
+          "log2_rop": 142.305,
+          "raw": "rop: \u22482^142.3, red: \u22482^142.3, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 3788607,
+          "log2_rop": 447.63599999999997,
+          "raw": "rop: \u22482^447.6, red: \u22482^447.6, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3788607,
+          "log2_rop": 393.981,
+          "raw": "rop: \u22482^394.0, red: \u22482^394.0, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3788607,
+          "log2_rop": 406.245,
+          "raw": "rop: \u22482^406.2, red: \u22482^406.2, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 138.00900000000001
+    },
+    {
+      "D": 13,
+      "gamma": 2117760,
+      "m": 543583729572,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 13769161074768369,
+      "MSIS_beta_ceil": 473155839211,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 47,
+      "rounded_tA_maximum": 140524887590137,
+      "tA_bytes": 7520,
+      "tA_gross_savings_bytes": 2080,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 271791864786,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 473155839211,
+          "log2_rop": 146.292,
+          "raw": "rop: \u22482^146.3, red: \u22482^146.3, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 473155839211,
+          "log2_rop": 128.757,
+          "raw": "rop: \u22482^128.8, red: \u22482^128.8, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 473155839211,
+          "log2_rop": 132.76500000000001,
+          "raw": "rop: \u22482^132.8, red: \u22482^132.8, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 7230708,
+          "log2_rop": 402.084,
+          "raw": "rop: \u22482^402.1, red: \u22482^402.1, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 7230708,
+          "log2_rop": 353.889,
+          "raw": "rop: \u22482^353.9, red: \u22482^353.9, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 7230708,
+          "log2_rop": 364.90500000000003,
+          "raw": "rop: \u22482^364.9, red: \u22482^364.9, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 128.757
+    },
+    {
+      "D": 14,
+      "gamma": 4235520,
+      "m": 271791864786,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 52479185141455434,
+      "MSIS_beta_ceil": 923680809843,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 46,
+      "rounded_tA_maximum": 70262443795068,
+      "tA_bytes": 7360,
+      "tA_gross_savings_bytes": 2240,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 135895932393,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 923680809843,
+          "log2_rop": 136.65599999999998,
+          "raw": "rop: \u22482^136.7, red: \u22482^136.7, \u03b4: 1.003568, \u03b2: 468, d: 3864, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 923680809843,
+          "log2_rop": 120.276,
+          "raw": "rop: \u22482^120.3, red: \u22482^120.3, \u03b4: 1.003568, \u03b2: 468, d: 3864, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 923680809843,
+          "log2_rop": 124.02000000000001,
+          "raw": "rop: \u22482^124.0, red: \u22482^124.0, \u03b4: 1.003568, \u03b2: 468, d: 3864, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 14115574,
+          "log2_rop": 361.20399999999995,
+          "raw": "rop: \u22482^361.2, red: \u22482^361.2, \u03b4: 1.001737, \u03b2: 1237, d: 4742, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 14115574,
+          "log2_rop": 317.909,
+          "raw": "rop: \u22482^317.9, red: \u22482^317.9, \u03b4: 1.001737, \u03b2: 1237, d: 4742, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 14115574,
+          "log2_rop": 327.805,
+          "raw": "rop: \u22482^327.8, red: \u22482^327.8, \u03b4: 1.001737, \u03b2: 1237, d: 4742, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 120.276
+    },
+    {
+      "D": 15,
+      "gamma": 8471040,
+      "m": 135895932393,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 204815928420014842,
+      "MSIS_beta_ceil": 1824754320459,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 45,
+      "rounded_tA_maximum": 35131221897534,
+      "tA_bytes": 7200,
+      "tA_gross_savings_bytes": 2400,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 67947966196,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 1824754320459,
+          "log2_rop": 127.312,
+          "raw": "rop: \u22482^127.3, red: \u22482^127.3, \u03b4: 1.003750, \u03b2: 436, d: 3770, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 1824754320459,
+          "log2_rop": 112.052,
+          "raw": "rop: \u22482^112.1, red: \u22482^112.1, \u03b4: 1.003750, \u03b2: 436, d: 3770, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 1824754320459,
+          "log2_rop": 115.54,
+          "raw": "rop: \u22482^115.5, red: \u22482^115.5, \u03b4: 1.003750, \u03b2: 436, d: 3770, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 27885666,
+          "log2_rop": 324.996,
+          "raw": "rop: \u22482^325.0, red: \u22482^325.0, \u03b4: 1.001883, \u03b2: 1113, d: 4554, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 27885666,
+          "log2_rop": 286.041,
+          "raw": "rop: \u22482^286.0, red: \u22482^286.0, \u03b4: 1.001883, \u03b2: 1113, d: 4554, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 27885666,
+          "log2_rop": 294.945,
+          "raw": "rop: \u22482^294.9, red: \u22482^294.9, \u03b4: 1.001883, \u03b2: 1113, d: 4554, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 112.052
+    },
+    {
+      "D": 12,
+      "gamma": 2,
+      "m": 575589939569199360,
+      "generator_efficiency_rule": false,
+      "B_half_squared_floor": 1808770127149292,
+      "MSIS_beta_ceil": 171569477163,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 48,
+      "rounded_tA_maximum": 281049775180273,
+      "tA_bytes": 7680,
+      "tA_gross_savings_bytes": 1920,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 287794969784599680,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 171569477163,
+          "log2_rop": 162.93599999999998,
+          "raw": "rop: \u22482^162.9, red: \u22482^162.9, \u03b4: 1.003147, \u03b2: 558, d: 4115, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 171569477163,
+          "log2_rop": 143.406,
+          "raw": "rop: \u22482^143.4, red: \u22482^143.4, \u03b4: 1.003147, \u03b2: 558, d: 4115, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 171569477163,
+          "log2_rop": 147.87,
+          "raw": "rop: \u22482^147.9, red: \u22482^147.9, \u03b4: 1.003147, \u03b2: 558, d: 4115, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 2621904,
+          "log2_rop": 476.83599999999996,
+          "raw": "rop: \u22482^476.8, red: \u22482^476.8, \u03b4: 1.001400, \u03b2: 1633, d: 5282, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 2621904,
+          "log2_rop": 419.681,
+          "raw": "rop: \u22482^419.7, red: \u22482^419.7, \u03b4: 1.001400, \u03b2: 1633, d: 5282, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 2621904,
+          "log2_rop": 432.745,
+          "raw": "rop: \u22482^432.7, red: \u22482^432.7, \u03b4: 1.001400, \u03b2: 1633, d: 5282, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 143.406
+    },
+    {
+      "D": 13,
+      "gamma": 2,
+      "m": 575589939569199360,
+      "generator_efficiency_rule": false,
+      "B_half_squared_floor": 6313647162046971,
+      "MSIS_beta_ceil": 320424686264,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 47,
+      "rounded_tA_maximum": 140524887590137,
+      "tA_bytes": 7520,
+      "tA_gross_savings_bytes": 2080,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 287794969784599680,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 320424686264,
+          "log2_rop": 152.42399999999998,
+          "raw": "rop: \u22482^152.4, red: \u22482^152.4, \u03b4: 1.003301, \u03b2: 522, d: 4018, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 320424686264,
+          "log2_rop": 134.154,
+          "raw": "rop: \u22482^134.2, red: \u22482^134.2, \u03b4: 1.003301, \u03b2: 522, d: 4018, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 320424686264,
+          "log2_rop": 138.33,
+          "raw": "rop: \u22482^138.3, red: \u22482^138.3, \u03b4: 1.003301, \u03b2: 522, d: 4018, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 4896690,
+          "log2_rop": 428.948,
+          "raw": "rop: \u22482^428.9, red: \u22482^428.9, \u03b4: 1.001520, \u03b2: 1469, d: 5068, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 4896690,
+          "log2_rop": 377.533,
+          "raw": "rop: \u22482^377.5, red: \u22482^377.5, \u03b4: 1.001520, \u03b2: 1469, d: 5068, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 4896690,
+          "log2_rop": 389.285,
+          "raw": "rop: \u22482^389.3, red: \u22482^389.3, \u03b4: 1.001520, \u03b2: 1469, d: 5068, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 134.154
+    },
+    {
+      "D": 14,
+      "gamma": 2,
+      "m": 575589939569199360,
+      "generator_efficiency_rule": false,
+      "B_half_squared_floor": 23505829326797848,
+      "MSIS_beta_ceil": 618195517318,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 46,
+      "rounded_tA_maximum": 70262443795068,
+      "tA_bytes": 7360,
+      "tA_gross_savings_bytes": 2240,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 287794969784599680,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 618195517318,
+          "log2_rop": 142.20399999999998,
+          "raw": "rop: \u22482^142.2, red: \u22482^142.2, \u03b4: 1.003468, \u03b2: 487, d: 3921, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 618195517318,
+          "log2_rop": 125.159,
+          "raw": "rop: \u22482^125.2, red: \u22482^125.2, \u03b4: 1.003468, \u03b2: 487, d: 3921, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 618195517318,
+          "log2_rop": 129.055,
+          "raw": "rop: \u22482^129.1, red: \u22482^129.1, \u03b4: 1.003468, \u03b2: 487, d: 3921, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 9447187,
+          "log2_rop": 385.14799999999997,
+          "raw": "rop: \u22482^385.1, red: \u22482^385.1, \u03b4: 1.001653, \u03b2: 1319, d: 4861, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 9447187,
+          "log2_rop": 338.983,
+          "raw": "rop: \u22482^339.0, red: \u22482^339.0, \u03b4: 1.001653, \u03b2: 1319, d: 4861, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 9447187,
+          "log2_rop": 349.535,
+          "raw": "rop: \u22482^349.5, red: \u22482^349.5, \u03b4: 1.001653, \u03b2: 1319, d: 4861, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 125.159
+    },
+    {
+      "D": 0,
+      "gamma": 176480,
+      "m": 6523004754864,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 76856165713289,
+      "MSIS_beta_ceil": 35781540727,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 60,
+      "rounded_tA_maximum": 1151179879138398720,
+      "tA_bytes": 9600,
+      "tA_gross_savings_bytes": 0,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 3261502377432,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 35781540727,
+          "log2_rop": 193.59599999999998,
+          "raw": "rop: \u22482^193.6, red: \u22482^193.6, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 35781540727,
+          "log2_rop": 170.391,
+          "raw": "rop: \u22482^170.4, red: \u22482^170.4, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 35781540727,
+          "log2_rop": 175.69500000000002,
+          "raw": "rop: \u22482^175.7, red: \u22482^175.7, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 546810,
+          "log2_rop": 633.64,
+          "raw": "rop: \u22482^633.6, red: \u22482^633.6, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 546810,
+          "log2_rop": 557.69,
+          "raw": "rop: \u22482^557.7, red: \u22482^557.7, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 546810,
+          "log2_rop": 575.0500000000001,
+          "raw": "rop: \u22482^575.1, red: \u22482^575.1, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 170.391
+    },
+    {
+      "D": 10,
+      "gamma": 458848,
+      "m": 2508847982640,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 530892623948837,
+      "MSIS_beta_ceil": 93067718653,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 50,
+      "rounded_tA_maximum": 1124199100721092,
+      "tA_bytes": 8000,
+      "tA_gross_savings_bytes": 1600,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 1254423991320,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 93067718653,
+          "log2_rop": 174.03199999999998,
+          "raw": "rop: \u22482^174.0, red: \u22482^174.0, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 93067718653,
+          "log2_rop": 153.172,
+          "raw": "rop: \u22482^153.2, red: \u22482^153.2, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 93067718653,
+          "log2_rop": 157.94,
+          "raw": "rop: \u22482^157.9, red: \u22482^157.9, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 1422250,
+          "log2_rop": 531.1479999999999,
+          "raw": "rop: \u22482^531.1, red: \u22482^531.1, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 1422250,
+          "log2_rop": 467.483,
+          "raw": "rop: \u22482^467.5, red: \u22482^467.5, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 1422250,
+          "log2_rop": 482.035,
+          "raw": "rop: \u22482^482.0, red: \u22482^482.0, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 153.172
+    },
+    {
+      "D": 11,
+      "gamma": 1588320,
+      "m": 724778306096,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 2753932354191564,
+      "MSIS_beta_ceil": 211663909306,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 49,
+      "rounded_tA_maximum": 562099550360546,
+      "tA_bytes": 7840,
+      "tA_gross_savings_bytes": 1760,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 362389153048,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 211663909306,
+          "log2_rop": 159.432,
+          "raw": "rop: \u22482^159.4, red: \u22482^159.4, \u03b4: 1.003196, \u03b2: 546, d: 4082, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 211663909306,
+          "log2_rop": 140.322,
+          "raw": "rop: \u22482^140.3, red: \u22482^140.3, \u03b4: 1.003196, \u03b2: 546, d: 4082, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 211663909306,
+          "log2_rop": 144.69,
+          "raw": "rop: \u22482^144.7, red: \u22482^144.7, \u03b4: 1.003196, \u03b2: 546, d: 4082, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 3234622,
+          "log2_rop": 459.9,
+          "raw": "rop: \u22482^459.9, red: \u22482^459.9, \u03b4: 1.001440, \u03b2: 1575, d: 5208, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3234622,
+          "log2_rop": 404.77500000000003,
+          "raw": "rop: \u22482^404.8, red: \u22482^404.8, \u03b4: 1.001440, \u03b2: 1575, d: 5208, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3234622,
+          "log2_rop": 417.375,
+          "raw": "rop: \u22482^417.4, red: \u22482^417.4, \u03b4: 1.001440, \u03b2: 1575, d: 5208, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 140.322
+    },
+    {
+      "D": 12,
+      "gamma": 573560,
+      "m": 2007078386112,
+      "generator_efficiency_rule": false,
+      "B_half_squared_floor": 2786758300172674,
+      "MSIS_beta_ceil": 212920789719,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 48,
+      "rounded_tA_maximum": 281049775180273,
+      "tA_bytes": 7680,
+      "tA_gross_savings_bytes": 1920,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 1003539193056,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 212920789719,
+          "log2_rop": 159.14,
+          "raw": "rop: \u22482^159.1, red: \u22482^159.1, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 212920789719,
+          "log2_rop": 140.065,
+          "raw": "rop: \u22482^140.1, red: \u22482^140.1, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 212920789719,
+          "log2_rop": 144.425,
+          "raw": "rop: \u22482^144.4, red: \u22482^144.4, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 3253829,
+          "log2_rop": 459.60799999999995,
+          "raw": "rop: \u22482^459.6, red: \u22482^459.6, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3253829,
+          "log2_rop": 404.51800000000003,
+          "raw": "rop: \u22482^404.5, red: \u22482^404.5, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 3253829,
+          "log2_rop": 417.11,
+          "raw": "rop: \u22482^417.1, red: \u22482^417.1, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 140.065
+    },
+    {
+      "D": 13,
+      "gamma": 2294240,
+      "m": 501769596528,
+      "generator_efficiency_rule": true,
+      "B_half_squared_floor": 14520018366691105,
+      "MSIS_beta_ceil": 485883888593,
+      "beta_lt_Q": true,
+      "beta_lt_q2": true,
+      "rounded_tA_bits_per_coefficient": 47,
+      "rounded_tA_maximum": 140524887590137,
+      "tA_bytes": 7520,
+      "tA_gross_savings_bytes": 2080,
+      "hint_count": 1280,
+      "hint_minimum_bytes_with_current_unary_family": 160,
+      "hint_canonical_absolute_cap": 250884798264,
+      "SIS": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 1151179879138398721,
+          "length_bound": 485883888593,
+          "log2_rop": 146.0,
+          "raw": "rop: \u22482^146.0, red: \u22482^146.0, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 485883888593,
+          "log2_rop": 128.5,
+          "raw": "rop: \u22482^128.5, red: \u22482^128.5, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 1151179879138398721,
+          "length_bound": 485883888593,
+          "log2_rop": 132.5,
+          "raw": "rop: \u22482^132.5, red: \u22482^132.5, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+        }
+      ],
+      "CRT_large_factor_lift": [
+        {
+          "model": "ADPS16_classical",
+          "modulus": 17592186058933,
+          "length_bound": 7425217,
+          "log2_rop": 400.332,
+          "raw": "rop: \u22482^400.3, red: \u22482^400.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+        },
+        {
+          "model": "ChaLoy21_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 7425217,
+          "log2_rop": 352.34700000000004,
+          "raw": "rop: \u22482^352.3, red: \u22482^352.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+        },
+        {
+          "model": "ADPS16_quantum_core",
+          "modulus": 17592186058933,
+          "length_bound": 7425217,
+          "log2_rop": 363.315,
+          "raw": "rop: \u22482^363.3, red: \u22482^363.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+        }
+      ],
+      "quantum_core_minimum": 128.5
+    }
+  ],
+  "thresholds": [
+    {
+      "minimum_quantum_core_bits": 128,
+      "maximum_binding_ceiling": 498240891764,
+      "cost_at_ceiling": 128.243,
+      "cost_after_ceiling": 127.986,
+      "feasible_profile_count": 2666,
+      "maximum_D": 13,
+      "frontier": [
+        {
+          "D": 0,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 480891326025,
+          "largest_gamma_B_half_squared_floor": 14223119884641033,
+          "tA_gross_savings_bytes": 0,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 1,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 480927675410,
+          "largest_gamma_B_half_squared_floor": 14225270433788361,
+          "tA_gross_savings_bytes": 160,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 2,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 481000374181,
+          "largest_gamma_B_half_squared_floor": 14229572019793737,
+          "tA_gross_savings_bytes": 320,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 3,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 481145771727,
+          "largest_gamma_B_half_squared_floor": 14238177142647369,
+          "tA_gross_savings_bytes": 480,
+          "smallest_gamma_quantum_core_minimum": 178.615,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 4,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 481436566837,
+          "largest_gamma_B_half_squared_floor": 14255395191726154,
+          "tA_gross_savings_bytes": 640,
+          "smallest_gamma_quantum_core_minimum": 178.358,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 5,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 482018157128,
+          "largest_gamma_B_half_squared_floor": 14289862503369803,
+          "tA_gross_savings_bytes": 800,
+          "smallest_gamma_quantum_core_minimum": 177.844,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 6,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 483181337988,
+          "largest_gamma_B_half_squared_floor": 14358921980601421,
+          "tA_gross_savings_bytes": 960,
+          "smallest_gamma_quantum_core_minimum": 177.073,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 7,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 485507700816,
+          "largest_gamma_B_half_squared_floor": 14497540350841937,
+          "tA_gross_savings_bytes": 1120,
+          "smallest_gamma_quantum_core_minimum": 175.274,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 8,
+          "smallest_gamma": 2,
+          "largest_gamma": 6353280,
+          "largest_gamma_binding_ceiling": 490160430831,
+          "largest_gamma_B_half_squared_floor": 14776774754432089,
+          "tA_gross_savings_bytes": 1280,
+          "smallest_gamma_quantum_core_minimum": 172.19,
+          "largest_gamma_quantum_core_minimum": 128.243,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 9,
+          "smallest_gamma": 2,
+          "largest_gamma": 5506176,
+          "largest_gamma_binding_ceiling": 438371475778,
+          "largest_gamma_B_half_squared_floor": 11818810419967264,
+          "tA_gross_savings_bytes": 1440,
+          "smallest_gamma_quantum_core_minimum": 167.564,
+          "largest_gamma_quantum_core_minimum": 129.785,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 10,
+          "smallest_gamma": 2,
+          "largest_gamma": 5506176,
+          "largest_gamma_binding_ceiling": 456982168980,
+          "largest_gamma_B_half_squared_floor": 12843792113431874,
+          "tA_gross_savings_bytes": 1600,
+          "smallest_gamma_quantum_core_minimum": 160.882,
+          "largest_gamma_quantum_core_minimum": 129.27100000000002,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 11,
+          "smallest_gamma": 2,
+          "largest_gamma": 5506176,
+          "largest_gamma_binding_ceiling": 494203879387,
+          "largest_gamma_B_half_squared_floor": 15021605939344773,
+          "tA_gross_savings_bytes": 1760,
+          "smallest_gamma_quantum_core_minimum": 152.401,
+          "largest_gamma_quantum_core_minimum": 128.243,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 12,
+          "smallest_gamma": 2,
+          "largest_gamma": 4235520,
+          "largest_gamma_binding_ceiling": 477005405818,
+          "largest_gamma_B_half_squared_floor": 13994153607255837,
+          "tA_gross_savings_bytes": 1920,
+          "smallest_gamma_quantum_core_minimum": 143.406,
+          "largest_gamma_quantum_core_minimum": 128.757,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 13,
+          "smallest_gamma": 2,
+          "largest_gamma": 2294240,
+          "largest_gamma_binding_ceiling": 485883888593,
+          "largest_gamma_B_half_squared_floor": 14520018366691105,
+          "tA_gross_savings_bytes": 2080,
+          "smallest_gamma_quantum_core_minimum": 134.154,
+          "largest_gamma_quantum_core_minimum": 128.5,
+          "largest_gamma_generator_efficiency_rule": true
+        }
+      ],
+      "generator_efficiency_subset_maximum_D": 13,
+      "generator_efficiency_subset_profile_count": 1183
+    },
+    {
+      "minimum_quantum_core_bits": 140,
+      "maximum_binding_ceiling": 215910798998,
+      "cost_at_ceiling": 140.065,
+      "cost_after_ceiling": 139.808,
+      "feasible_profile_count": 2303,
+      "maximum_D": 12,
+      "frontier": [
+        {
+          "D": 0,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 208852818987,
+          "largest_gamma_B_half_squared_floor": 2681218522682160,
+          "tA_gross_savings_bytes": 0,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 1,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 208889157936,
+          "largest_gamma_B_half_squared_floor": 2682152291643888,
+          "tA_gross_savings_bytes": 160,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 2,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 208961835848,
+          "largest_gamma_B_half_squared_floor": 2684020317278065,
+          "tA_gross_savings_bytes": 320,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 3,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 209107191725,
+          "largest_gamma_B_half_squared_floor": 2687758319389297,
+          "tA_gross_savings_bytes": 480,
+          "smallest_gamma_quantum_core_minimum": 178.615,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 4,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 209397903692,
+          "largest_gamma_B_half_squared_floor": 2695242126983281,
+          "tA_gross_savings_bytes": 640,
+          "smallest_gamma_quantum_core_minimum": 178.358,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 5,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 209979328479,
+          "largest_gamma_B_half_squared_floor": 2710240955657330,
+          "tA_gross_savings_bytes": 800,
+          "smallest_gamma_quantum_core_minimum": 177.844,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 6,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 211142181426,
+          "largest_gamma_B_half_squared_floor": 2740363466949749,
+          "tA_gross_savings_bytes": 960,
+          "smallest_gamma_quantum_core_minimum": 177.073,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 7,
+          "smallest_gamma": 2,
+          "largest_gamma": 2581020,
+          "largest_gamma_binding_ceiling": 213467900560,
+          "largest_gamma_B_half_squared_floor": 2801107905311865,
+          "tA_gross_savings_bytes": 1120,
+          "smallest_gamma_quantum_core_minimum": 175.274,
+          "largest_gamma_quantum_core_minimum": 140.065,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 8,
+          "smallest_gamma": 2,
+          "largest_gamma": 2541312,
+          "largest_gamma_binding_ceiling": 215256327991,
+          "largest_gamma_B_half_squared_floor": 2848271652525962,
+          "tA_gross_savings_bytes": 1280,
+          "smallest_gamma_quantum_core_minimum": 172.19,
+          "largest_gamma_quantum_core_minimum": 140.065,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 9,
+          "smallest_gamma": 2,
+          "largest_gamma": 2294240,
+          "largest_gamma_binding_ceiling": 206744879277,
+          "largest_gamma_B_half_squared_floor": 2627330745201957,
+          "tA_gross_savings_bytes": 1440,
+          "smallest_gamma_quantum_core_minimum": 167.564,
+          "largest_gamma_quantum_core_minimum": 140.579,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 10,
+          "smallest_gamma": 2,
+          "largest_gamma": 2117760,
+          "largest_gamma_binding_ceiling": 212626036673,
+          "largest_gamma_B_half_squared_floor": 2779042790668311,
+          "tA_gross_savings_bytes": 1600,
+          "smallest_gamma_quantum_core_minimum": 160.882,
+          "largest_gamma_quantum_core_minimum": 140.065,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 11,
+          "smallest_gamma": 2,
+          "largest_gamma": 1588320,
+          "largest_gamma_binding_ceiling": 211663909306,
+          "largest_gamma_B_half_squared_floor": 2753932354191564,
+          "tA_gross_savings_bytes": 1760,
+          "smallest_gamma_quantum_core_minimum": 152.401,
+          "largest_gamma_quantum_core_minimum": 140.322,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 12,
+          "smallest_gamma": 2,
+          "largest_gamma": 573560,
+          "largest_gamma_binding_ceiling": 212920789719,
+          "largest_gamma_B_half_squared_floor": 2786758300172674,
+          "tA_gross_savings_bytes": 1920,
+          "smallest_gamma_quantum_core_minimum": 143.406,
+          "largest_gamma_quantum_core_minimum": 140.065,
+          "largest_gamma_generator_efficiency_rule": false
+        }
+      ],
+      "generator_efficiency_subset_maximum_D": 11,
+      "generator_efficiency_subset_profile_count": 1004
+    },
+    {
+      "minimum_quantum_core_bits": 153,
+      "maximum_binding_ceiling": 94210810327,
+      "cost_at_ceiling": 153.172,
+      "cost_after_ceiling": 152.915,
+      "feasible_profile_count": 1788,
+      "maximum_D": 10,
+      "frontier": [
+        {
+          "D": 0,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 88982600674,
+          "largest_gamma_B_half_squared_floor": 485146426338538,
+          "tA_gross_savings_bytes": 0,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 153.943,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 1,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 89018881590,
+          "largest_gamma_B_half_squared_floor": 485543673510826,
+          "tA_gross_savings_bytes": 160,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 153.943,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 2,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 89091443596,
+          "largest_gamma_B_half_squared_floor": 486338655566122,
+          "tA_gross_savings_bytes": 320,
+          "smallest_gamma_quantum_core_minimum": 178.872,
+          "largest_gamma_quantum_core_minimum": 153.943,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 3,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 89236568298,
+          "largest_gamma_B_half_squared_floor": 487930570519594,
+          "tA_gross_savings_bytes": 480,
+          "smallest_gamma_quantum_core_minimum": 178.615,
+          "largest_gamma_quantum_core_minimum": 153.943,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 4,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 89526820453,
+          "largest_gamma_B_half_squared_floor": 491122203798059,
+          "tA_gross_savings_bytes": 640,
+          "smallest_gamma_quantum_core_minimum": 178.358,
+          "largest_gamma_quantum_core_minimum": 153.943,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 5,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 90107335641,
+          "largest_gamma_B_half_squared_floor": 497536683841068,
+          "tA_gross_savings_bytes": 800,
+          "smallest_gamma_quantum_core_minimum": 177.844,
+          "largest_gamma_quantum_core_minimum": 153.686,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 6,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 91268408565,
+          "largest_gamma_B_half_squared_floor": 510490497871406,
+          "tA_gross_savings_bytes": 960,
+          "smallest_gamma_quantum_core_minimum": 177.073,
+          "largest_gamma_quantum_core_minimum": 153.686,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 7,
+          "smallest_gamma": 2,
+          "largest_gamma": 917696,
+          "largest_gamma_binding_ceiling": 93590717207,
+          "largest_gamma_B_half_squared_floor": 536897541709362,
+          "tA_gross_savings_bytes": 1120,
+          "smallest_gamma_quantum_core_minimum": 175.274,
+          "largest_gamma_quantum_core_minimum": 153.172,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 8,
+          "smallest_gamma": 2,
+          "largest_gamma": 860340,
+          "largest_gamma_binding_ceiling": 94105950010,
+          "largest_gamma_B_half_squared_floor": 542846199951346,
+          "tA_gross_savings_bytes": 1280,
+          "smallest_gamma_quantum_core_minimum": 172.19,
+          "largest_gamma_quantum_core_minimum": 153.172,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 9,
+          "smallest_gamma": 2,
+          "largest_gamma": 705920,
+          "largest_gamma_binding_ceiling": 92277480923,
+          "largest_gamma_B_half_squared_floor": 521883178569337,
+          "tA_gross_savings_bytes": 1440,
+          "smallest_gamma_quantum_core_minimum": 167.564,
+          "largest_gamma_quantum_core_minimum": 153.429,
+          "largest_gamma_generator_efficiency_rule": true
+        },
+        {
+          "D": 10,
+          "smallest_gamma": 2,
+          "largest_gamma": 458848,
+          "largest_gamma_binding_ceiling": 93067718653,
+          "largest_gamma_B_half_squared_floor": 530892623948837,
+          "tA_gross_savings_bytes": 1600,
+          "smallest_gamma_quantum_core_minimum": 160.882,
+          "largest_gamma_quantum_core_minimum": 153.172,
+          "largest_gamma_generator_efficiency_rule": true
+        }
+      ],
+      "generator_efficiency_subset_maximum_D": 10,
+      "generator_efficiency_subset_profile_count": 800
+    }
+  ],
+  "SIS_optimizer_calls": 428
+}

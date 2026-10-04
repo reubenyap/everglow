@@ -6,6 +6,7 @@ __pycache__/
 /benchmark_first.json*
 /benchmark_sanitize.json*
 /benchmark_*.bin
+!/benchmark_bimodal_compressed.json.signature.bin
 /vendor/lazer-source.tar.gz
 /vendor/lazer/lazer.h
 /vendor/lazer/lib*.a

@@ -1,0 +1,817 @@
+{
+  "status": "raw_proofs_verified_compact_sizes_exactly_counted_not_deployed",
+  "date": "2026-10-04",
+  "security_certified": false,
+  "source_checksums": {
+    "tools/evaluate_rounding_security.py": "b9fa47f67edeaf470574e7af7a5b422e9cc8a49f88b2aa1433f532a7fcbb9107",
+    "tools/benchmark_rounding.py": "9fe4c208c88a141e1c80b2e86328580f99648a6b3a672588650ab9517bed6f0e",
+    "tools/measure_rounding_wire.py": "4334ced667e004a7e85b4b9c4a823fb7699d20e25b07969064d069bf6f4c96d0"
+  },
+  "measured_proofs": 27,
+  "profiles": [
+    {
+      "prefix": "analysis/rounding-baseline-five-20261004/D0-g512/benchmark.json",
+      "D": 0,
+      "gamma": 512,
+      "manifest_sha256": "d28a47419e53630e1984dae99d2af65fe2779340554433227f07fbecf85f4166",
+      "sample_count": 5,
+      "best_fixed_hint_low_bits": 7,
+      "best_current_codec_width": 7,
+      "current_codec_mean_bytes": 39382,
+      "mean_bytes": 39382,
+      "median_bytes": 39383,
+      "minimum_bytes": 39371,
+      "maximum_bytes": 39392,
+      "full_proof_verifications": 5,
+      "integration_tests": false,
+      "sign_seconds_median": 3.658132575,
+      "verify_seconds_median": 0.538180704,
+      "sampler_aborts": 0,
+      "attempts": 86,
+      "core_estimates": {
+        "D": 0,
+        "gamma": 512,
+        "m": 2248398201442185,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 31572639091752,
+        "MSIS_beta_ceil": 23326878867,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 60,
+        "rounded_tA_maximum": 1151179879138398720,
+        "tA_bytes": 9600,
+        "tA_gross_savings_bytes": 0,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 1124199100721092,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 23326878867,
+            "log2_rop": 203.232,
+            "raw": "rop: \u22482^203.2, red: \u22482^203.2, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 23326878867,
+            "log2_rop": 178.872,
+            "raw": "rop: \u22482^178.9, red: \u22482^178.9, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 23326878867,
+            "log2_rop": 184.44,
+            "raw": "rop: \u22482^184.4, red: \u22482^184.4, \u03b4: 1.002679, \u03b2: 696, d: 4459, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 356479,
+            "log2_rop": 688.2439999999999,
+            "raw": "rop: \u22482^688.2, red: \u22482^688.2, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 356479,
+            "log2_rop": 605.749,
+            "raw": "rop: \u22482^605.7, red: \u22482^605.7, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 356479,
+            "log2_rop": 624.605,
+            "raw": "rop: \u22482^624.6, red: \u22482^624.6, \u03b4: 1.001047, \u03b2: 2357, d: 6107, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 178.872
+      },
+      "parameters": {
+        "D": 0,
+        "gamma": 512,
+        "m": 2248398201442185,
+        "Bsq": 31572639091752,
+        "z21_abs_max": 5618953,
+        "hint_abs_max": 1124199100721092,
+        "hint_min": -1124199100721092,
+        "tA1_max": 1151179879138398720,
+        "compact_tA1_bits": 60,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D0-g512-4hpz7ia8",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 76800,
+        "c": 160,
+        "hint": 11380.8,
+        "z1": 24847.4,
+        "z21": 85876.2,
+        "z3": 5338.4
+      },
+      "baseline_hint8_median_bytes": 39445,
+      "proof_sha256": [
+        "e2d62e1d3fd85acef8a285b16dfa63d3446e2169396b4fa009cc1ea910b38996",
+        "ce66fd5b9bd5ae7fec303b16bcce111117cff16500f3da4ce7af27b7f1e25670",
+        "86c2a5015d3e2cdc9172959a4f584775d226a312e9958e15bf75e179b0328606",
+        "084d01424571afa08c73c2331590637641e8087d26c23968f96eb6e07384f9f1",
+        "ee66ac9afb25808d42bf6f5d2d0645c3b89d089c45b14529d524d76b26367e88"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-finalists-20261004/D12-g573560/benchmark.json",
+      "D": 12,
+      "gamma": 573560,
+      "manifest_sha256": "36ca425a277f10db62238babe492cd34cd29b41e6072e912ae276a4a5b024934",
+      "sample_count": 5,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 36370,
+      "mean_bytes": 36224.2,
+      "median_bytes": 36226,
+      "minimum_bytes": 36209,
+      "maximum_bytes": 36234,
+      "full_proof_verifications": 5,
+      "integration_tests": true,
+      "sign_seconds_median": 1.20623992,
+      "verify_seconds_median": 0.544652658,
+      "sampler_aborts": 0,
+      "attempts": 85,
+      "core_estimates": {
+        "D": 12,
+        "gamma": 573560,
+        "m": 2007078386112,
+        "generator_efficiency_rule": false,
+        "B_half_squared_floor": 2786758300172674,
+        "MSIS_beta_ceil": 212920789719,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 48,
+        "rounded_tA_maximum": 281049775180273,
+        "tA_bytes": 7680,
+        "tA_gross_savings_bytes": 1920,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 1003539193056,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 212920789719,
+            "log2_rop": 159.14,
+            "raw": "rop: \u22482^159.1, red: \u22482^159.1, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 212920789719,
+            "log2_rop": 140.065,
+            "raw": "rop: \u22482^140.1, red: \u22482^140.1, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 212920789719,
+            "log2_rop": 144.425,
+            "raw": "rop: \u22482^144.4, red: \u22482^144.4, \u03b4: 1.003200, \u03b2: 545, d: 4081, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 3253829,
+            "log2_rop": 459.60799999999995,
+            "raw": "rop: \u22482^459.6, red: \u22482^459.6, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 3253829,
+            "log2_rop": 404.51800000000003,
+            "raw": "rop: \u22482^404.5, red: \u22482^404.5, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 3253829,
+            "log2_rop": 417.11,
+            "raw": "rop: \u22482^417.1, red: \u22482^417.1, \u03b4: 1.001441, \u03b2: 1574, d: 5206, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 140.065
+      },
+      "parameters": {
+        "D": 12,
+        "gamma": 573560,
+        "m": 2007078386112,
+        "Bsq": 2786758300172674,
+        "z21_abs_max": 52789755,
+        "hint_abs_max": 1003539193056,
+        "hint_min": -1003539193055,
+        "tA1_max": 281049775180273,
+        "compact_tA1_bits": 48,
+        "lazer_codegen_efficiency_condition": false
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D12-g573560-ucn3zs3b",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 61440,
+        "c": 160,
+        "hint": 1454.6,
+        "z1": 24854,
+        "z21": 85878.8,
+        "z3": 5353.8
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "174a6b431b286a686b958ac812491773b1f8ef5dc325d285b877f161d9fdc7c1",
+        "d7b76fc1155bf26125378b245be456e4fc6c3b497aa548a3b2bad12665b05eaf",
+        "fe3cbbc857b9306388a9597fe3d0a4a2cccf12a593123c43c636af6dc5c3eed0",
+        "771ba8248b64ec0e604d95d010f18205bb91dc6d66d525341232037a6e107512",
+        "6e4c1055658c44104f3abd3f4ba2409d8d1396a0c51ae69dcb64d866ad8e596f"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-finalists-20261004/D13-g2294240/benchmark.json",
+      "D": 13,
+      "gamma": 2294240,
+      "manifest_sha256": "bf03e8cca7d19885b40d526d88592a26b754615395122bbdb9611cae4ba2e234",
+      "sample_count": 5,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 36206.2,
+      "mean_bytes": 36052.8,
+      "median_bytes": 36054,
+      "minimum_bytes": 36043,
+      "maximum_bytes": 36059,
+      "full_proof_verifications": 5,
+      "integration_tests": true,
+      "sign_seconds_median": 1.334111524,
+      "verify_seconds_median": 0.550031261,
+      "sampler_aborts": 0,
+      "attempts": 54,
+      "core_estimates": {
+        "D": 13,
+        "gamma": 2294240,
+        "m": 501769596528,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 14520018366691105,
+        "MSIS_beta_ceil": 485883888593,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 47,
+        "rounded_tA_maximum": 140524887590137,
+        "tA_bytes": 7520,
+        "tA_gross_savings_bytes": 2080,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 250884798264,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 485883888593,
+            "log2_rop": 146.0,
+            "raw": "rop: \u22482^146.0, red: \u22482^146.0, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 485883888593,
+            "log2_rop": 128.5,
+            "raw": "rop: \u22482^128.5, red: \u22482^128.5, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 485883888593,
+            "log2_rop": 132.5,
+            "raw": "rop: \u22482^132.5, red: \u22482^132.5, \u03b4: 1.003404, \u03b2: 500, d: 3956, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 7425217,
+            "log2_rop": 400.332,
+            "raw": "rop: \u22482^400.3, red: \u22482^400.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 7425217,
+            "log2_rop": 352.34700000000004,
+            "raw": "rop: \u22482^352.3, red: \u22482^352.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 7425217,
+            "log2_rop": 363.315,
+            "raw": "rop: \u22482^363.3, red: \u22482^363.3, \u03b4: 1.001604, \u03b2: 1371, d: 4935, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 128.5
+      },
+      "parameters": {
+        "D": 13,
+        "gamma": 2294240,
+        "m": 501769596528,
+        "Bsq": 14520018366691105,
+        "z21_abs_max": 120499038,
+        "hint_abs_max": 250884798264,
+        "hint_min": -250884798263,
+        "tA1_max": 140524887590137,
+        "compact_tA1_bits": 47,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D13-g2294240-un45hjxj",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 60160,
+        "c": 160,
+        "hint": 1359.4,
+        "z1": 24850,
+        "z21": 85893.4,
+        "z3": 5347.2
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "8b5f96b3d53452cb2d4e3755a53b6a45f1a8bfd60e60345aaa8f4834cea9d56d",
+        "ce4be07c8675bd5d7324be4b4de249071416bb5bceb00e43876f69eb576c114c",
+        "474cfee132bb5f8b52503c760e5a6201771e4c9b15c0aae23d9be2e3dfcd9b67",
+        "7524cff4466c0996f8e254817c61d73d793a46f0719f977c3f14dff0ca70592e",
+        "c449e10f081f7be2fa3b69ceecfaf05a4b8ddb1e86378981e53ccb6829e9f0bc"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-comparisons-20261004/D12-g1058880/benchmark.json",
+      "D": 12,
+      "gamma": 1058880,
+      "manifest_sha256": "3fd3340a8b01ec1eb20e884938ae0e2dab353862928172b4b0e40048ead72d11",
+      "sample_count": 3,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 36363.666666666664,
+      "mean_bytes": 36211,
+      "median_bytes": 36215,
+      "minimum_bytes": 36203,
+      "maximum_bytes": 36215,
+      "full_proof_verifications": 3,
+      "integration_tests": false,
+      "sign_seconds_median": 1.874912888,
+      "verify_seconds_median": 0.555213823,
+      "sampler_aborts": 0,
+      "attempts": 33,
+      "core_estimates": {
+        "D": 12,
+        "gamma": 1058880,
+        "m": 1087167459144,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 3778735934572997,
+        "MSIS_beta_ceil": 247915039690,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 48,
+        "rounded_tA_maximum": 281049775180273,
+        "tA_bytes": 7680,
+        "tA_gross_savings_bytes": 1920,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 543583729572,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 247915039690,
+            "log2_rop": 156.804,
+            "raw": "rop: \u22482^156.8, red: \u22482^156.8, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 247915039690,
+            "log2_rop": 138.00900000000001,
+            "raw": "rop: \u22482^138.0, red: \u22482^138.0, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 247915039690,
+            "log2_rop": 142.305,
+            "raw": "rop: \u22482^142.3, red: \u22482^142.3, \u03b4: 1.003235, \u03b2: 537, d: 4057, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 3788607,
+            "log2_rop": 447.63599999999997,
+            "raw": "rop: \u22482^447.6, red: \u22482^447.6, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 3788607,
+            "log2_rop": 393.981,
+            "raw": "rop: \u22482^394.0, red: \u22482^394.0, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 3788607,
+            "log2_rop": 406.245,
+            "raw": "rop: \u22482^406.2, red: \u22482^406.2, \u03b4: 1.001471, \u03b2: 1533, d: 5154, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 138.00900000000001
+      },
+      "parameters": {
+        "D": 12,
+        "gamma": 1058880,
+        "m": 1087167459144,
+        "Bsq": 3778735934572997,
+        "z21_abs_max": 61471423,
+        "hint_abs_max": 543583729572,
+        "hint_min": -543583729571,
+        "tA1_max": 281049775180273,
+        "compact_tA1_bits": 48,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D12-g1058880-cedutihn",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 61440,
+        "c": 160,
+        "hint": 1372.3333333333333,
+        "z1": 24852,
+        "z21": 85875.66666666667,
+        "z3": 5337
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "c6827c6c071080d863fcf640587cdd663a5c2b83d8f5a689c0ad3745b855572e",
+        "ead51d8f464b888e080bda272ab8dcc0b5b595b3a58004eb533f4d13a283b1a1",
+        "454e00056ab60c104753c0aa2e6c96a3a7a2d4bbeb5e4c6e0e3a4b02fdacd177"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-comparisons-20261004/D13-g2117760/benchmark.json",
+      "D": 13,
+      "gamma": 2117760,
+      "manifest_sha256": "ddd934571d4e64d5b88b03fd3f6f4f9b99f3896fa6bdb23d02a4d63bc9583bcc",
+      "sample_count": 3,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 36202,
+      "mean_bytes": 36048.666666666664,
+      "median_bytes": 36052,
+      "minimum_bytes": 36040,
+      "maximum_bytes": 36054,
+      "full_proof_verifications": 3,
+      "integration_tests": false,
+      "sign_seconds_median": 1.369546087,
+      "verify_seconds_median": 0.551370434,
+      "sampler_aborts": 0,
+      "attempts": 27,
+      "core_estimates": {
+        "D": 13,
+        "gamma": 2117760,
+        "m": 543583729572,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 13769161074768369,
+        "MSIS_beta_ceil": 473155839211,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 47,
+        "rounded_tA_maximum": 140524887590137,
+        "tA_bytes": 7520,
+        "tA_gross_savings_bytes": 2080,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 271791864786,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 473155839211,
+            "log2_rop": 146.292,
+            "raw": "rop: \u22482^146.3, red: \u22482^146.3, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 473155839211,
+            "log2_rop": 128.757,
+            "raw": "rop: \u22482^128.8, red: \u22482^128.8, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 473155839211,
+            "log2_rop": 132.76500000000001,
+            "raw": "rop: \u22482^132.8, red: \u22482^132.8, \u03b4: 1.003399, \u03b2: 501, d: 3960, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 7230708,
+            "log2_rop": 402.084,
+            "raw": "rop: \u22482^402.1, red: \u22482^402.1, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 7230708,
+            "log2_rop": 353.889,
+            "raw": "rop: \u22482^353.9, red: \u22482^353.9, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 7230708,
+            "log2_rop": 364.90500000000003,
+            "raw": "rop: \u22482^364.9, red: \u22482^364.9, \u03b4: 1.001599, \u03b2: 1377, d: 4943, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 128.757
+      },
+      "parameters": {
+        "D": 13,
+        "gamma": 2117760,
+        "m": 543583729572,
+        "Bsq": 13769161074768369,
+        "z21_abs_max": 117342068,
+        "hint_abs_max": 271791864786,
+        "hint_min": -271791864785,
+        "tA1_max": 140524887590137,
+        "compact_tA1_bits": 47,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D13-g2117760-j0a8ik9u",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 60160,
+        "c": 160,
+        "hint": 1357,
+        "z1": 24900,
+        "z21": 85809,
+        "z3": 5351.666666666667
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "9cebf0d0df7f05a8d8c75c72afd5d23d9312c46c14e95ae930ad041d64606084",
+        "61293939a585594d01e197c9bab4898535a7f17daf3034ea6836574ad11edf9f",
+        "3ac632a134dfd911546b1ecb1a260a586eef8be5b176df506780f0b00657c075"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-comparisons-20261004/D10-g458848/benchmark.json",
+      "D": 10,
+      "gamma": 458848,
+      "manifest_sha256": "995d186aa30d7eb4c52e48f20b6fd910d931817370eb0664da2f316b336aae2e",
+      "sample_count": 3,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 36682.333333333336,
+      "mean_bytes": 36537,
+      "median_bytes": 36545,
+      "minimum_bytes": 36521,
+      "maximum_bytes": 36545,
+      "full_proof_verifications": 3,
+      "integration_tests": false,
+      "sign_seconds_median": 3.20987638,
+      "verify_seconds_median": 0.545787933,
+      "sampler_aborts": 0,
+      "attempts": 47,
+      "core_estimates": {
+        "D": 10,
+        "gamma": 458848,
+        "m": 2508847982640,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 530892623948837,
+        "MSIS_beta_ceil": 93067718653,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 50,
+        "rounded_tA_maximum": 1124199100721092,
+        "tA_bytes": 8000,
+        "tA_gross_savings_bytes": 1600,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 1254423991320,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 93067718653,
+            "log2_rop": 174.03199999999998,
+            "raw": "rop: \u22482^174.0, red: \u22482^174.0, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 93067718653,
+            "log2_rop": 153.172,
+            "raw": "rop: \u22482^153.2, red: \u22482^153.2, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 93067718653,
+            "log2_rop": 157.94,
+            "raw": "rop: \u22482^157.9, red: \u22482^157.9, \u03b4: 1.003000, \u03b2: 596, d: 4215, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 1422250,
+            "log2_rop": 531.1479999999999,
+            "raw": "rop: \u22482^531.1, red: \u22482^531.1, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 1422250,
+            "log2_rop": 467.483,
+            "raw": "rop: \u22482^467.5, red: \u22482^467.5, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 1422250,
+            "log2_rop": 482.035,
+            "raw": "rop: \u22482^482.0, red: \u22482^482.0, \u03b4: 1.001286, \u03b2: 1819, d: 5510, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 153.172
+      },
+      "parameters": {
+        "D": 10,
+        "gamma": 458848,
+        "m": 2508847982640,
+        "Bsq": 530892623948837,
+        "z21_abs_max": 23041107,
+        "hint_abs_max": 1254423991320,
+        "hint_min": -1254423991319,
+        "tA1_max": 1124199100721092,
+        "compact_tA1_bits": 50,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D10-g458848-mxorl0vb",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 64000,
+        "c": 160,
+        "hint": 1449.3333333333333,
+        "z1": 24867.333333333332,
+        "z21": 85806.66666666667,
+        "z3": 5359
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "0754b280366d578f4d9209a0a9526f58b4929da4cf61b7854cd744823a031110",
+        "dcddeb3db13fdaf78797bb40e3d863487678112bacb8b638e16fd8c47708b510",
+        "d47b813765f0f6db1a0907103a026e304b5d660d13bcf33aa0d748e6acd1f998"
+      ]
+    },
+    {
+      "prefix": "analysis/rounding-comparisons-20261004/D0-g176480/benchmark.json",
+      "D": 0,
+      "gamma": 176480,
+      "manifest_sha256": "77e20a169918b03a2c0f84d368045b64ba21064a4d46145c7b49417eff7c3707",
+      "sample_count": 3,
+      "best_fixed_hint_low_bits": 0,
+      "best_current_codec_width": 1,
+      "current_codec_mean_bytes": 38291,
+      "mean_bytes": 38165.666666666664,
+      "median_bytes": 38162,
+      "minimum_bytes": 38157,
+      "maximum_bytes": 38178,
+      "full_proof_verifications": 3,
+      "integration_tests": false,
+      "sign_seconds_median": 0.670263475,
+      "verify_seconds_median": 0.548779389,
+      "sampler_aborts": 0,
+      "attempts": 37,
+      "core_estimates": {
+        "D": 0,
+        "gamma": 176480,
+        "m": 6523004754864,
+        "generator_efficiency_rule": true,
+        "B_half_squared_floor": 76856165713289,
+        "MSIS_beta_ceil": 35781540727,
+        "beta_lt_Q": true,
+        "beta_lt_q2": true,
+        "rounded_tA_bits_per_coefficient": 60,
+        "rounded_tA_maximum": 1151179879138398720,
+        "tA_bytes": 9600,
+        "tA_gross_savings_bytes": 0,
+        "hint_count": 1280,
+        "hint_minimum_bytes_with_current_unary_family": 160,
+        "hint_canonical_absolute_cap": 3261502377432,
+        "SIS": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 1151179879138398721,
+            "length_bound": 35781540727,
+            "log2_rop": 193.59599999999998,
+            "raw": "rop: \u22482^193.6, red: \u22482^193.6, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 35781540727,
+            "log2_rop": 170.391,
+            "raw": "rop: \u22482^170.4, red: \u22482^170.4, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 1151179879138398721,
+            "length_bound": 35781540727,
+            "log2_rop": 175.69500000000002,
+            "raw": "rop: \u22482^175.7, red: \u22482^175.7, \u03b4: 1.002776, \u03b2: 663, d: 4381, tag: euclidean"
+          }
+        ],
+        "CRT_large_factor_lift": [
+          {
+            "model": "ADPS16_classical",
+            "modulus": 17592186058933,
+            "length_bound": 546810,
+            "log2_rop": 633.64,
+            "raw": "rop: \u22482^633.6, red: \u22482^633.6, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+          },
+          {
+            "model": "ChaLoy21_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 546810,
+            "log2_rop": 557.69,
+            "raw": "rop: \u22482^557.7, red: \u22482^557.7, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+          },
+          {
+            "model": "ADPS16_quantum_core",
+            "modulus": 17592186058933,
+            "length_bound": 546810,
+            "log2_rop": 575.0500000000001,
+            "raw": "rop: \u22482^575.1, red: \u22482^575.1, \u03b4: 1.001118, \u03b2: 2170, d: 5909, tag: euclidean"
+          }
+        ],
+        "quantum_core_minimum": 170.391
+      },
+      "parameters": {
+        "D": 0,
+        "gamma": 176480,
+        "m": 6523004754864,
+        "Bsq": 76856165713289,
+        "z21_abs_max": 8766764,
+        "hint_abs_max": 3261502377432,
+        "hint_min": -3261502377431,
+        "tA1_max": 1151179879138398720,
+        "compact_tA1_bits": 60,
+        "lazer_codegen_efficiency_condition": true
+      },
+      "source_copy": "/home/reuben/.cache/blrs-rounding-experiments/D0-g176480-xmw8lw5o",
+      "source_unchanged": true,
+      "mean_field_bits": {
+        "tB": 88320,
+        "base_h": 18600,
+        "tA1": 76800,
+        "c": 160,
+        "hint": 1698.3333333333333,
+        "z1": 24849.666666666668,
+        "z21": 85818,
+        "z3": 5346.333333333333
+      },
+      "baseline_hint8_median_bytes": null,
+      "proof_sha256": [
+        "3dc12e7f9d0a4efd2dac4e25de39f31c6456be719e265f73307b89ef5214a076",
+        "924cbd02f0ea6794088a21db6526e034041525639115ee9160c3a2684b2696be",
+        "4d2421d2dc4c0588bc486a85e0e8da191243686690c3e1986211c68d7c863fd3"
+      ]
+    }
+  ]
+}
