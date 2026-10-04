@@ -75,11 +75,11 @@ Clang-Tidy and Cppcheck ran on both frontier copies using their own matching com
 
 Independent source review checked the extraction arithmetic, rounding endpoints, even-modulus canonical hints, sampler ordering, native D propagation, manifest binding, isolation and size accounting. A discovered one-unit rounding-tie error in the arithmetic helper was corrected; bit widths and search results were unchanged.
 
-The six delivered files were inspected in a separate Git review snapshot against baseline 6829d3ef53647bf973401d68f486bb724c2ee845; git diff --check passed. CodeRabbit authentication succeeded, but automatic approval review rejected the external review invocation before execution because it did not accept the existing instructions as authorization to export these research scripts, results and documentation. No payload was submitted and no CodeRabbit analysis ran. The external review remains pending explicit export approval; no retry, alternate service or extra paid credits were used.
+The six original evaluation files were inspected in a separate Git review snapshot against baseline 6829d3ef53647bf973401d68f486bb724c2ee845; git diff --check passed. The first CodeRabbit submission was blocked before execution by automatic approval review. After the user requested publication before external review, the work was pushed to reubenyap/everglow at d6e05bd91987a2f2d3c6a0d0510bb3219f4d1a93. CodeRabbit then completed a review of the eight changed text files, excluding the public binary signature fixture. Its three minor findings concerned the dependency-prefix default, the matching reproduction instructions, and unchecked template substitutions. The follow-up removes the personal default, documents a configurable runtime path and enforces exact substitution counts, including expected zeros. No extra paid credits or alternate reviewer were used.
 
 ## Reproduction and implementation boundary
 
-Saved summaries: [security results](rounding_security_results.json), [benchmark and size results](rounding_benchmark_results.json). Full local fixtures, manifests, hashes, source patches, logs and per-proof fresh-verification evidence remain under analysis/rounding-baseline-five-20261004, analysis/rounding-finalists-20261004 and analysis/rounding-comparisons-20261004. Static-analysis commands and logs are in analysis/rounding-static-checks/summary.json.
+Saved summaries: [security results](rounding_security_results.json), [benchmark and size results](rounding_benchmark_results.json). Result-file driver hashes identify the originally measured scripts, available at commit d6e05bd91987a2f2d3c6a0d0510bb3219f4d1a93; they are preserved when later publication fixes change the harness. Full local fixtures, manifests, hashes, source patches, logs and per-proof fresh-verification evidence remain under analysis/rounding-baseline-five-20261004, analysis/rounding-finalists-20261004 and analysis/rounding-comparisons-20261004. Static-analysis commands and logs are in analysis/rounding-static-checks/summary.json.
 
 Run the following from the workspace; use fresh output paths:
 
@@ -89,12 +89,12 @@ python tools/benchmark_rounding.py --self-test
 python tools/measure_rounding_wire.py --check
 ```
 
-Inside WSL, use the existing Sage environment for the security sweep, and system Python for native experiments:
+Inside WSL, use an existing runtime directory containing the micromamba executable, the sage-env environment with GMP/MPFR development files, and the pinned lattice-estimator checkout. Replace the placeholder below with that directory. Use its Sage Python for the security sweep and system Python for native experiments:
 
 ```sh
-runtime=/home/reuben/.cache/spark-pq-measure-20261002
+runtime=/path/to/existing/runtime
 "$runtime/micromamba" --no-rc run -p "$runtime/sage-env" python tools/evaluate_rounding_security.py "$runtime/lattice-estimator" analysis/rounding_security_repeat.json
-python3 tools/benchmark_rounding.py --candidates 12:573560 13:2294240 --runs 5 --integration-tests --results analysis/rounding-repeat
+python3 tools/benchmark_rounding.py --dependency-prefix "$runtime/sage-env" --candidates 12:573560 13:2294240 --runs 5 --integration-tests --results analysis/rounding-repeat
 python3 tools/measure_rounding_wire.py analysis/rounding-repeat/D12-g573560/benchmark.json analysis/rounding-repeat/D13-g2294240/benchmark.json --output analysis/rounding_wire_repeat.json
 ```
 

@@ -67,12 +67,16 @@ def patch_copy(copy, profile):
     (copy/'backend/proof_params.h').write_text(generated)
     bounds = {'31572639091752': str(bsq), '5618954': str(profile['z21_abs_max']+1),
               '5618953': str(profile['z21_abs_max']), '1124199100721092': str(profile['hint_abs_max'])}
-    for name in ('backend/backend.cpp', 'src/codec.cpp', 'src/candidate.cpp',
-                 'src/benchmark.cpp', 'tests/candidate_tests.cpp'):
+    expected_counts = {'backend/backend.cpp': (0, 0, 1, 1),
+                       'src/codec.cpp': (1, 0, 1, 1),
+                       'src/candidate.cpp': (1, 0, 1, 1),
+                       'src/benchmark.cpp': (0, 1, 0, 0),
+                       'tests/candidate_tests.cpp': (0, 1, 0, 0)}
+    for name, counts in expected_counts.items():
         path = copy/name
         code = path.read_text()
-        for old, new in bounds.items():
-            code = code.replace(old, new)
+        for (old, new), count in zip(bounds.items(), counts):
+            code = replace(code, old, new, count)
         if name == 'src/candidate.cpp':
             code = replace(code, r'\"D\":0', rf'\"D\":{d}')
             code = replace(code, r'\"gamma\":512', rf'\"gamma\":{gamma}')
@@ -150,8 +154,10 @@ def experiment(profile, args, destination):
                 'fixed_profile_codec_tests': ('included' if (profile['D'], profile['gamma']) == (0, 512) else
                     'skipped: existing codec size/digest fixtures are D=0/gamma=512-specific')}
     (destination/'experiment.json').write_text(json.dumps(evidence, indent=2)+'\n')
-    command(['cmake', '-S', '.', '-B', 'build', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release',
-             f'-DCMAKE_PREFIX_PATH={args.dependency_prefix}'], copy, destination/'configure.log')
+    configure = ['cmake', '-S', '.', '-B', 'build', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release']
+    if args.dependency_prefix:
+        configure.append(f'-DCMAKE_PREFIX_PATH={args.dependency_prefix}')
+    command(configure, copy, destination/'configure.log')
     command(['cmake', '--build', 'build', '-j4'], copy, destination/'build.log')
     tests = ['ctest', '--test-dir', 'build', '--output-on-failure']
     if (profile['D'], profile['gamma']) != (0, 512):
@@ -182,7 +188,7 @@ def main():
     parser.add_argument('--core', choices=('bimodal', 'ordinary'), default='bimodal')
     parser.add_argument('--attempt-limit', type=int, default=512)
     parser.add_argument('--integration-tests', action='store_true')
-    parser.add_argument('--dependency-prefix', default='/home/reuben/.cache/spark-pq-measure-20261002/sage-env')
+    parser.add_argument('--dependency-prefix', help='Existing dependency prefix; otherwise use CMake system search')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -197,6 +203,12 @@ def main():
                 continue
             raise AssertionError(f'accepted invalid profile {invalid}')
         assert replace('abc', 'b', 'd') == 'adc'
+        for text, count in (('abc', 1), ('target target', 1), ('target', 0)):
+            try:
+                replace(text, 'target', 'replacement', count)
+            except ValueError:
+                continue
+            raise AssertionError('missing, duplicate or unexpected patch target accepted')
         print('parameter and patch guards passed')
         return
     if args.runs < 1 or args.attempt_limit < 1 or args.results is None:
